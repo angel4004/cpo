@@ -1,0 +1,20 @@
+version: v0.1.0
+status: candidate
+runtime_core_files:
+  - /runtime/core/canon_paf_knowledge_layer.docx
+  - /runtime/core/method_cpo_copilot_ux_kernel.md
+  - /runtime/core/method_evidence_and_uncertainty_policy.md
+  - /runtime/core/method_paf_answer_modes.md
+runtime_project_setup_files:
+  - /runtime/project_setup/checklist_cpo_copilot_setup_checklist.docx
+  - /runtime/project_setup/readme_how_to_set_up_a_cpo_copilot_project.docx
+  - /runtime/project_setup/method_cpo_copilot_project_instruction_template.docx
+  - /runtime/project_setup/start_here_activate_cpo_copilot.docx
+  - /runtime/project_setup/template_exploration_context_note_template_for_cpo_copilot.docx
+  - /runtime/project_setup/template_product_context_note_template_for_cpo_copilot.docx
+  - /runtime/project_setup/method_recommended_product_context_schema_for_cpo_copilot.docx
+  - /runtime/project_setup/method_recommended_exploration_context_schema_for_cpo_copilot.docx
+notes:
+  - Релиз содержит только runtime-файлы CPO copilot.
+  - Часть Google Docs экспортирована в .docx как устойчивый снимок состава.
+  - .docx выбран как формат текущего релизного снимка там, где Markdown не был зафиксирован как обязательный формат.
