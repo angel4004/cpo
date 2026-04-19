@@ -46,9 +46,11 @@
 10. [TEMPLATE] Exploration Context Note Template for CPO Copilot — `runtime/project_setup/template_exploration_context_note_template_for_cpo_copilot.md`
 11. [CHECKLIST] CPO Copilot Setup Checklist — `runtime/project_setup/checklist_cpo_copilot_setup_checklist.md`
 12. [README] How to Set Up a CPO Copilot Project — `runtime/project_setup/readme_how_to_set_up_a_cpo_copilot_project.md`
+13. [PROMPT] Launch CPO Copilot — `runtime/project_setup/prompt_launch_cpo_copilot.md`
 
 ## Что нужно найти в источниках проекта
 Сначала проверь, что в Sources есть полный рабочий markdown-пакет по списку выше.
+Если пользователь просит готовый текст первого сообщения, направь его к файлу [PROMPT] Launch CPO Copilot.
 
 ## Проверка источников
 Если не найден один или несколько файлов из рабочего пакета:
