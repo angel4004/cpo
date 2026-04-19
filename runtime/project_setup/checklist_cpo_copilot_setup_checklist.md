@@ -13,15 +13,9 @@
 [ ] Exploration mode — продукта пока нет и нужно выбрать направление
 
 ## 2. Подключён рабочий пакет
-[ ] Подключён [CANON] PAF Knowledge Layer (в Git-репозитории — runtime/core/canon_paf_knowledge_layer.md)
-[ ] Подключён [METHOD] CPO Copilot UX Kernel
-[ ] Подключён [METHOD] Evidence & Uncertainty Policy
-[ ] Подключён [METHOD] PAF Answer Modes
-[ ] Подключена setup-папка CPO Copilot Project Setup (в Git-репозитории — runtime/project_setup)
-[ ] Подключён [METHOD] Recommended Product Context Schema for CPO Copilot
-[ ] Подключён [METHOD] Recommended Exploration Context Schema for CPO Copilot
-[ ] Подключён [TEMPLATE] Product Context Note Template for CPO Copilot
-[ ] Подключён [TEMPLATE] Exploration Context Note Template for CPO Copilot
+[ ] Подключён полный рабочий markdown-пакет по каноническому списку из [START HERE] Activate CPO Copilot
+[ ] [START HERE] Activate CPO Copilot находится и читается в Sources
+[ ] Если файлов не хватает, copilot просит добавить недостающие файлы по списку из [START HERE], а не папку и не альтернативный источник
 
 ## 3. Настроены Project instructions
 [ ] Либо вставлен [METHOD] CPO Copilot Project Instruction Template
@@ -35,7 +29,8 @@
 [ ] Copilot прямо говорит, что обязательно добавить в Sources сейчас
 [ ] Copilot прямо говорит, что не стоит добавлять в Sources
 [ ] Copilot прямо говорит, что можно добавить позже
-[ ] Copilot не заставляет добавлять всю внутреннюю мастерскую, если нужен только runtime-слой
+[ ] Copilot не просит Google Drive, папки или весь репозиторий, если нужен только рабочий markdown-пакет
+[ ] Copilot при проверке состава рабочего пакета опирается на [START HERE], а не на собственный список
 [ ] Copilot не просит добавлять шумные raw-export материалы без явной пользы
 [ ] Copilot объясняет простыми словами, что такое Sources
 [ ] Copilot не ждёт, что пользователь сам догадается, что именно туда добавлять
@@ -145,9 +140,9 @@
 «Что мне нужно добавить в Sources сейчас, а что не стоит добавлять?»
 
 Хороший ответ:
-[ ] Называет конкретные файлы и типы материалов
+[ ] Называет недостающие файлы рабочего пакета по [START HERE] и нужные типы проектных материалов
 [ ] Разделяет must have / не стоит / optional
-[ ] Не просит добавлять лишний шум
+[ ] Не просит Google Drive, папки, весь репозиторий или лишний шум
 
 
 
