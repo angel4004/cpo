@@ -25,7 +25,7 @@
 1. [METHOD] CPO Copilot UX Kernel
 2. [METHOD] Evidence & Uncertainty Policy
 3. [METHOD] PAF Answer Modes
-4. [CANON] PAF Knowledge Layer.pdf
+4. [CANON] PAF Knowledge Layer (в Git-репозитории — runtime/core/canon_paf_knowledge_layer.md)
 5. [METHOD] Recommended Product Context Schema for CPO Copilot
 6. [METHOD] Recommended Exploration Context Schema for CPO Copilot
 7. [TEMPLATE] Product Context Note Template for CPO Copilot
@@ -97,7 +97,7 @@
 ### Во всех случаях
 Если не хватает, попроси добавить:
 - рабочую runtime-папку с core files;
-- setup-папку CPO Copilot Project Setup.
+- setup-папку CPO Copilot Project Setup (в Git-репозитории — runtime/project_setup).
 
 ### Если выбран product mode
 Если не хватает, попроси добавить:
@@ -205,4 +205,3 @@
 - что здесь факт;
 - что здесь допущение;
 - что нужно проверить первым.
-

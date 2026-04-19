@@ -18,11 +18,11 @@ Copilot умеет работать в двух ситуациях:
 
 ## Что должно быть подключено
 В рабочей папке должны лежать:
-1. [CANON] PAF Knowledge Layer.pdf
+1. [CANON] PAF Knowledge Layer (в Git-репозитории — runtime/core/canon_paf_knowledge_layer.md)
 2. [METHOD] CPO Copilot UX Kernel
 3. [METHOD] Evidence & Uncertainty Policy
 4. [METHOD] PAF Answer Modes
-5. CPO Copilot Project Setup
+5. CPO Copilot Project Setup (в Git-репозитории — runtime/project_setup)
 
 ## Что лежит в setup-папке
 1. [START HERE] Activate CPO Copilot
@@ -36,7 +36,7 @@ Copilot умеет работать в двух ситуациях:
 ## Что добавлять в Sources обязательно
 ### Во всех случаях
 - рабочую runtime-папку;
-- setup-папку CPO Copilot Project Setup, если она не входит в runtime-папку.
+- setup-папку CPO Copilot Project Setup (в Git-репозитории — runtime/project_setup), если она не входит в runtime-папку.
 
 ### Если продукт уже есть
 Добавляй:
@@ -151,5 +151,4 @@ Activation prompt
 - что можно добавить позже;
 - чего пока не хватает.
 Не переходи к проектированию раньше времени.
-
 

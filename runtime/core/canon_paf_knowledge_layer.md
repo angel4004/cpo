@@ -27,38 +27,38 @@
 
 Что в каноне сказано прямо. Релевантные страницы (ядро методологии и первичные источники определений):
 
-- Жизненный цикл продукта: https://productframework.ru/product_life_cycle.
-- Детальный процесс Product Discovery: https://productframework.ru/product_discovery.
-- Жизненный цикл feature: https://productframework.ru/feature_life_cycle.
-- Принципы/аксиомы: https://productframework.ru/principles.
-- Сущность Hypothesis (общая): https://productframework.ru/hypothesis.
+- Жизненный цикл продукта: <https://productframework.ru/product_life_cycle>
+- Детальный процесс Product Discovery: <https://productframework.ru/product_discovery>
+- Жизненный цикл feature: <https://productframework.ru/feature_life_cycle>
+- Принципы/аксиомы: <https://productframework.ru/principles>
+- Сущность Hypothesis (общая): <https://productframework.ru/hypothesis>
 - Типы гипотез:
-- Customer: https://productframework.ru/hypotheses/customer.
-- Value Proposition: https://productframework.ru/hypotheses/value_proposition.
-- Solution: https://productframework.ru/hypotheses/solution.
-- Business Model: https://productframework.ru/hypotheses/business_model.
+- Customer: <https://productframework.ru/hypotheses/customer>
+- Value Proposition: <https://productframework.ru/hypotheses/value_proposition>
+- Solution: <https://productframework.ru/hypotheses/solution>
+- Business Model: <https://productframework.ru/hypotheses/business_model>
 
 - Активности (I этап / Product Discovery), ключевые для артефактов и решений:
-- Market Analysis: https://productframework.ru/activities/market_analysis.
-- Competitors Analysis: https://productframework.ru/activities/competitors_analysis.
-- Value Proposition Research: https://productframework.ru/activities/value_proposition_research.
-- Business Model Research: https://productframework.ru/activities/business_model_research.
-- Competitive Positioning Design: https://productframework.ru/activities/competitive_positioning_design.
-- Acquisition Strategy Design: https://productframework.ru/activities/acquisition_strategy_design.
-- Activation Strategy Design: https://productframework.ru/activities/activation_strategy_design.
-- Solution Prototyping: https://productframework.ru/activities/solution_prototyping.
-- Business Logic Design: https://productframework.ru/activities/business_logic_design.
-- Requirements Design: https://productframework.ru/activities/requirements_design.
-- Quantitative Analytics: https://productframework.ru/activities/quantitative_analytics.
-- Qualitative Analytics: https://productframework.ru/activities/qualitative_analytics.
-- Acquisition Configuration Research: https://productframework.ru/activities/acquisition_configuration_research.
+- Market Analysis: <https://productframework.ru/activities/market_analysis>
+- Competitors Analysis: <https://productframework.ru/activities/competitors_analysis>
+- Value Proposition Research: <https://productframework.ru/activities/value_proposition_research>
+- Business Model Research: <https://productframework.ru/activities/business_model_research>
+- Competitive Positioning Design: <https://productframework.ru/activities/competitive_positioning_design>
+- Acquisition Strategy Design: <https://productframework.ru/activities/acquisition_strategy_design>
+- Activation Strategy Design: <https://productframework.ru/activities/activation_strategy_design>
+- Solution Prototyping: <https://productframework.ru/activities/solution_prototyping>
+- Business Logic Design: <https://productframework.ru/activities/business_logic_design>
+- Requirements Design: <https://productframework.ru/activities/requirements_design>
+- Quantitative Analytics: <https://productframework.ru/activities/quantitative_analytics>
+- Qualitative Analytics: <https://productframework.ru/activities/qualitative_analytics>
+- Acquisition Configuration Research: <https://productframework.ru/activities/acquisition_configuration_research>
 
 - Канонические статьи внутри домена (для терминов, критериев, алгоритмов):
-- «Ценность и North Star»: https://productframework.ru/value_and_north_star.
-- «Алгоритм выбора метрик для PMF»: https://productframework.ru/product_market_fit.
-- «Цикл эволюции продукта»: https://productframework.ru/product_evolution_cycle.
-- «Если ресурсов не хватает»: https://productframework.ru/discovery_triangle.
-- Индекс «Лекториум» как карта этих статей: https://productframework.ru/library.
+- «Ценность и North Star»: <https://productframework.ru/value_and_north_star>
+- «Алгоритм выбора метрик для PMF»: <https://productframework.ru/product_market_fit>
+- «Цикл эволюции продукта»: <https://productframework.ru/product_evolution_cycle>
+- «Если ресурсов не хватает»: <https://productframework.ru/discovery_triangle>
+- Индекс «Лекториум» как карта этих статей: <https://productframework.ru/library>
 
 - Что неясно или отсутствует. На сайте есть ссылки на внешние материалы (miro.com, docs.google.com, t.me и т.п.). По правилам этого задания они не используются как источники; максимум — фиксируются как «указано, что существует», без заимствования содержимого.
 
@@ -569,7 +569,7 @@ LTV».
 - affected entities: Stage numbering (Product Life Cycle) vs Stage numbering (Product Discovery)
 - explanation: в PLC «Stage 1 = Product Discovery», а внутри Product Discovery есть «Stage 1…Stage 7».
 Это разные шкалы «Stage» с одинаковым словом/номером. 167
-- pages involved: https://productframework.ru/product_life_cycle,
+- pages involved: <https://productframework.ru/product_life_cycle>
 - excerpts: «Stage 1 Product Discovery…» vs «Stage 1 Customer Validation… Stage 7…».
 - why strict conclusion is impossible: нельзя автоматически интерпретировать «Stage 2» без указания шкалы.
 
@@ -578,7 +578,7 @@ LTV».
 - affected entities: Value Validation vs Solution Validation
 - explanation: канон говорит, что «часто» ценность нельзя валидировать без конкретного
 решения и что «часто… один и тот же эксперимент».
-- pages involved: https://productframework.ru/product_discovery, https://productframework.ru/hypotheses/value_proposition, https://productframework.ru/hypotheses/solution
+- pages involved: <https://productframework.ru/product_discovery>, <https://productframework.ru/hypotheses/value_proposition>, <https://productframework.ru/hypotheses/solution>
 - excerpts: «…в половине случаев… валидация… один и тот же эксперимент».
 - why strict conclusion is risky: граница стадий становится контекстной; copilot должен уметь говорить «может слиться».
 

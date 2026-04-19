@@ -13,11 +13,11 @@
 [ ] Exploration mode — продукта пока нет и нужно выбрать направление
 
 ## 2. Подключён рабочий пакет
-[ ] Подключён [CANON] PAF Knowledge Layer.pdf
+[ ] Подключён [CANON] PAF Knowledge Layer (в Git-репозитории — runtime/core/canon_paf_knowledge_layer.md)
 [ ] Подключён [METHOD] CPO Copilot UX Kernel
 [ ] Подключён [METHOD] Evidence & Uncertainty Policy
 [ ] Подключён [METHOD] PAF Answer Modes
-[ ] Подключена папка CPO Copilot Project Setup
+[ ] Подключена setup-папка CPO Copilot Project Setup (в Git-репозитории — runtime/project_setup)
 [ ] Подключён [METHOD] Recommended Product Context Schema for CPO Copilot
 [ ] Подключён [METHOD] Recommended Exploration Context Schema for CPO Copilot
 [ ] Подключён [TEMPLATE] Product Context Note Template for CPO Copilot
@@ -178,4 +178,3 @@
 ## 10. Финальный вердикт
 [ ] Проект реально готов к работе
 [ ] Проект ещё не готов — сначала нужно закрыть незаполненные пункты
-
