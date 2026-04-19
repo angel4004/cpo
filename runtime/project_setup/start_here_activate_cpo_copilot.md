@@ -42,8 +42,8 @@
 6. [METHOD] CPO Copilot Project Instruction Template — `runtime/project_setup/method_cpo_copilot_project_instruction_template.md`
 7. [METHOD] Recommended Product Context Schema for CPO Copilot — `runtime/project_setup/method_recommended_product_context_schema_for_cpo_copilot.md`
 8. [METHOD] Recommended Exploration Context Schema for CPO Copilot — `runtime/project_setup/method_recommended_exploration_context_schema_for_cpo_copilot.md`
-9. [TEMPLATE] Product Project Passport Template for CPO Copilot — `runtime/project_setup/template_product_context_note_template_for_cpo_copilot.md`
-10. [TEMPLATE] Exploration Project Passport Template for CPO Copilot — `runtime/project_setup/template_exploration_context_note_template_for_cpo_copilot.md`
+9. [TEMPLATE] Product Project Passport Template for CPO Copilot — `runtime/project_setup/template_product_project_passport_template_for_cpo_copilot.md`
+10. [TEMPLATE] Exploration Project Passport Template for CPO Copilot — `runtime/project_setup/template_exploration_project_passport_template_for_cpo_copilot.md`
 11. [CHECKLIST] CPO Copilot Setup Checklist — `runtime/project_setup/checklist_cpo_copilot_setup_checklist.md`
 12. [README] How to Set Up a CPO Copilot Project — `runtime/project_setup/readme_how_to_set_up_a_cpo_copilot_project.md`
 13. [PROMPT] Launch CPO Copilot — `runtime/project_setup/prompt_launch_cpo_copilot.md`
