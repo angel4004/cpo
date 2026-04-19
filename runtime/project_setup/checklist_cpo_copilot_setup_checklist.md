@@ -29,6 +29,13 @@
 [ ] Copilot прямо объяснил, что этот документ нужно сохранить отдельным markdown-файлом
 [ ] Паспорт сохранён и добавлен в Sources
 
+## 3C. Решение по setup-файлам после активации
+[ ] Понятно, что setup-файлы из `runtime/project_setup` можно убирать из Sources только после успешной активации
+[ ] Текст [PROJECT INSTRUCTIONS] уже вставлен в Project instructions
+[ ] [PROJECT PASSPORT] уже сохранён отдельным markdown-файлом и добавлен в Sources
+[ ] Понятно, что в Sources должны остаться markdown-файлы из `runtime/core`, [PROJECT PASSPORT] и актуальные документы проекта
+[ ] Если повторная активация пока не нужна, setup-файлы из `runtime/project_setup` можно убрать из Sources
+
 ## 4. Проверка логики Sources
 [ ] Copilot прямо говорит, что уже подключено в Sources
 [ ] Copilot прямо говорит, что обязательно добавить в Sources сейчас
