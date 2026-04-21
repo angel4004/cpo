@@ -55,19 +55,40 @@
 - Что уже подтверждено
 - Что пока остаётся допущением
 
-## 7. Гипотезы и артефакты
+## 7. PMF evidence
+- PMF claim
+- Segment
+- Need
+- Alternative
+- PMF metric
+- Почему эта метрика подходит частотности потребности
+- Baseline / norm / benchmark
+- Assumptions about norm
+- Qualitative evidence
+- Forbidden claims
+- Next check
+
+## 8. Hypothesis map
+- Customer hypotheses
+- Value proposition hypotheses
+- Solution hypotheses
+- Business model hypotheses
+- Current priority hypothesis
+- Validation status
+
+## 9. Гипотезы и артефакты
 - Активные гипотезы
 - Какие рабочие материалы уже есть
 - Какие эксперименты идут сейчас
 - Каких материалов не хватает
 
-## 8. Ограничения, риски и неизвестное
+## 10. Ограничения, риски и неизвестное
 - Ограничения
 - Главные риски
 - Что мы пока не знаем
 - Какие зоны нельзя решать без отдельного подтверждения
 
-## 9. Источники правды и обновление
+## 11. Источники правды и обновление
 - Главный источник правды
 - Дополнительные источники правды
 - Дата последнего обновления
@@ -131,6 +152,25 @@
 Что уже подтверждено:
 Что пока остаётся допущением:
 
+PMF claim:
+Segment:
+Need:
+Alternative:
+PMF metric:
+Почему PMF metric подходит частотности потребности:
+Baseline / norm / benchmark:
+Assumptions about norm:
+Qualitative evidence:
+Forbidden claims:
+Next check:
+
+Customer hypotheses:
+Value proposition hypotheses:
+Solution hypotheses:
+Business model hypotheses:
+Current priority hypothesis:
+Validation status:
+
 Активные гипотезы:
 Какие материалы уже есть:
 Какие эксперименты идут сейчас:
@@ -146,4 +186,3 @@
 Дата последнего обновления:
 Кто обновляет:
 Когда нужно обновлять:
-
