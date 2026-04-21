@@ -85,6 +85,8 @@
 [ ] Указаны главный и дополнительные источники правды
 [ ] Указаны дата обновления, владелец обновления и триггеры обновления
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с product context
+[ ] [PROJECT PASSPORT] содержит PMF evidence или явное `not assessed`
+[ ] [PROJECT PASSPORT] содержит Hypothesis map
 
 ## 5B. Если выбран exploration mode
 [ ] Понятно, кто инициатор поиска
@@ -119,6 +121,7 @@
 [ ] Acquisition / GTM-related вопросы не превращаются в новый канонический тип гипотезы
 [ ] PMF не утверждается без PMF evidence block
 [ ] PMF evidence block содержит метрику, связь метрики с потребностью, baseline / norm / benchmark, assumptions about norm, qualitative evidence, forbidden claims и next check
+[ ] Для раннего PMF-обсуждения copilot фиксирует evidence gap без тяжёлого полного блока, если сильного PMF-claim ещё нет
 [ ] Copilot не начинает с roadmap слишком рано
 [ ] Copilot не уходит в тяжёлое проектирование без сигнала готовности
 [ ] Copilot умеет прямо назвать локальный максимум
