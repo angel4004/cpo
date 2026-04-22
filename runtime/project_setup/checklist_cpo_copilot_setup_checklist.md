@@ -70,7 +70,11 @@
 [ ] Заполнены ключевые метрики
 [ ] Заполнены подтверждённые данные
 [ ] Разведены подтверждённое и предположения
+[ ] Если есть PMF-claim, заполнены PMF metric, baseline / norm / benchmark и assumptions about norm
+[ ] Если обсуждается переход к Product Growth, PMF не утверждается без отдельного PMF evidence block
 [ ] Заполнены активные гипотезы
+[ ] Гипотезы разложены на customer, value proposition, solution и business model
+[ ] Отдельно названа current priority hypothesis и её validation status
 [ ] Заполнены существующие материалы
 [ ] Заполнены текущие эксперименты, если они есть
 [ ] Названы отсутствующие материалы
@@ -81,6 +85,8 @@
 [ ] Указаны главный и дополнительные источники правды
 [ ] Указаны дата обновления, владелец обновления и триггеры обновления
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с product context
+[ ] [PROJECT PASSPORT] содержит PMF evidence или явное `not assessed`
+[ ] [PROJECT PASSPORT] содержит Hypothesis map
 
 ## 5B. Если выбран exploration mode
 [ ] Понятно, кто инициатор поиска
@@ -109,12 +115,20 @@
 [ ] Copilot понимает, что общий brain и локальные факты — это разные слои
 [ ] Copilot не путает канон, метод и локальный контекст
 [ ] Copilot не обещает лучшее решение без missing inputs
+[ ] Decision-запросы не проходят без readiness check
+[ ] Readiness check показывает тип решения, PAF-контекст, required inputs / artifacts, missing inputs, forbidden claims и next check
+[ ] Discovery-вопросы маршрутизируются в customer, value proposition, solution и business model hypotheses
+[ ] Acquisition / GTM-related вопросы не превращаются в новый канонический тип гипотезы
+[ ] PMF не утверждается без PMF evidence block
+[ ] PMF evidence block содержит метрику, связь метрики с потребностью, baseline / norm / benchmark, assumptions about norm, qualitative evidence, forbidden claims и next check
+[ ] Для раннего PMF-обсуждения copilot фиксирует evidence gap без тяжёлого полного блока, если сильного PMF-claim ещё нет
 [ ] Copilot не начинает с roadmap слишком рано
 [ ] Copilot не уходит в тяжёлое проектирование без сигнала готовности
 [ ] Copilot умеет прямо назвать локальный максимум
 [ ] Copilot говорит простым русским языком
 [ ] Copilot объясняет английские термины по-русски при первом упоминании
 [ ] Copilot не делает вид, что product context уже есть, если на самом деле идёт exploration mode
+[ ] Copilot не использует source docs как рабочую память проекта
 
 ## 8. Smoke tests
 
@@ -175,6 +189,52 @@
 [ ] Называет сигнал перехода
 [ ] Называет, чего ещё не хватает
 [ ] Называет следующий главный рабочий материал
+
+### Тест 6 — передача в разработку
+Запрос:
+«Можно ли отдавать это в разработку?»
+
+Хороший ответ:
+[ ] Сначала определяет тип решения
+[ ] Называет канонический PAF-контекст
+[ ] Называет required inputs / artifacts
+[ ] Показывает missing inputs
+[ ] Показывает forbidden claims
+[ ] Называет next check
+[ ] Не отвечает сразу «да» или «нет», если входов не хватает
+
+### Тест 7 — выбор фичи
+Запрос:
+«Стоит ли делать такую фичу?»
+
+Хороший ответ:
+[ ] Раскладывает вопрос на customer, value proposition, solution и business model hypotheses
+[ ] Показывает, если затронуто несколько типов гипотез
+[ ] Называет первую гипотезу для проверки
+[ ] Называет подходящий класс проверки или эксперимента
+[ ] Называет forbidden claims
+
+### Тест 8 — PMF и переход к Growth
+Запрос:
+«У нас уже есть PMF, давай переходить к Growth.»
+
+Хороший ответ:
+[ ] Проверяет PMF evidence block
+[ ] Называет PMF claim, segment, need и alternative
+[ ] Проверяет PMF metric и связь метрики с частотностью потребности
+[ ] Проверяет baseline / norm / benchmark и assumptions about norm
+[ ] Показывает qualitative evidence
+[ ] Называет missing inputs и forbidden claims, если доказательств не хватает
+
+### Тест 9 — ранняя идея
+Запрос:
+«У меня есть идея, что с ней делать?»
+
+Хороший ответ:
+[ ] Сохраняет dialogue-first режим
+[ ] Сначала помогает прояснить суть идеи
+[ ] Не выдаёт тяжёлый checklist сразу
+[ ] Объясняет, что канонические проверки включатся при приближении к решению
 
 ## 9. Дисциплина обновления
 [ ] Понятно, кто обновляет контекст
