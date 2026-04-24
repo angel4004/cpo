@@ -5,7 +5,7 @@
 - Добавлен Passport Challenge Review, Passport Hardening, Final Passport Snapshot и Retrospective Passport Review для старых паспортов.
 - Закреплено правило No Hidden Review Criteria: review не считает ошибкой пользователя отсутствие поля, которое onboarding не дал возможности заполнить.
 - Product и Exploration Passport Templates теперь содержат Customer Value Chain / Candidate Customer Value Chain.
-- В setup-инструкции добавлено требование создавать отдельный GPT/Claude Project и включать память `Только для проекта`.
+- В корневой README добавлено требование создавать отдельный GPT/Claude Project и включать память `Только для проекта`.
 
 ## v0.2.0
 - Закреплены обязательные PAF-проверки перед сильными продуктовыми решениями.
