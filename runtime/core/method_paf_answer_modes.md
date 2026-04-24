@@ -104,7 +104,8 @@
 - явно говорить, если value validation и solution validation в конкретном проекте фактически пересекаются.
 
 Customer Value Chain Review не является новой стадией PAF.
-Это локальный review-слой CPO Copilot, который помогает строже применять PAF, но не меняет канон.
+Это локальный review-слой CPO Copilot для проверки связности need, capability, action и outcome.
+Он помогает задавать evidence-вопросы вокруг ценности, но не меняет канон PAF.
 
 ## Обязательные правила
 - Не путать 4 стадии Product Life Cycle и 7 стадий внутри Product Discovery как одну шкалу.
