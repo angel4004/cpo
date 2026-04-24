@@ -1,7 +1,7 @@
 # CPO copilot
 
 ## Что это
-Это рабочий markdown-пакет для запуска продуктового copilot внутри GPT Project.
+Это рабочий markdown-пакет для запуска продуктового copilot внутри GPT Project или Claude Project.
 
 Это не обычное приложение.
 Его не нужно запускать локально через `Run`.
@@ -16,16 +16,17 @@ Copilot умеет работать в двух режимах:
 - `exploration mode` — когда продукта ещё нет и нужно выбрать направление.
 
 ## Как запустить
-1. Создай новый GPT Project.
-2. Скачай все `.md`-файлы из `runtime/core`.
-3. Скачай все `.md`-файлы из `runtime/project_setup`.
-4. Добавь эти файлы в `Sources` своего GPT Project.
-5. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
-6. Скопируй весь текст из этого файла в первый чат проекта.
-7. Пройди онбординг.
-8. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot.
-9. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
-10. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
+1. Создай новый GPT Project или Claude Project.
+2. В настройках памяти выбери режим `Только для проекта`. Не используй глобальную память для контекста CPO Copilot.
+3. Скачай все `.md`-файлы из `runtime/core`.
+4. Скачай все `.md`-файлы из `runtime/project_setup`.
+5. Добавь эти файлы в `Sources` / project knowledge своего проекта.
+6. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
+7. Скопируй весь текст из этого файла в первый чат проекта.
+8. Пройди онбординг.
+9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot.
+10. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
+11. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
 
 ## Что должно остаться после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
