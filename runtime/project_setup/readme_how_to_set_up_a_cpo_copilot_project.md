@@ -10,14 +10,28 @@
 - Этот файл — короткая памятка о том, что должно получиться после активации.
 
 ## Что должно получиться после активации
-В конце онбординга copilot должен выдать 2 результата:
+После онбординга copilot должен провести draft/review/hardening и выдать 2 результата:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
-- `[PROJECT PASSPORT]` — markdown-файл, который нужно сохранить и добавить в `Sources`.
+- `[PROJECT PASSPORT]` — финальный стабильный markdown-файл, который нужно сохранить и добавить в `Sources`.
+
+Первый паспорт после onboarding — это Draft Project Passport, а не финальный source document.
+До публикации в Sources должны пройти:
+
+```text
+Customer Value Chain Intake
+→ Draft Project Passport
+→ Passport Challenge Review
+→ Passport Hardening
+→ Final Passport Snapshot
+```
+
+Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
+Copilot не обновляет Sources автоматически.
 
 ## Что можно убрать из Sources после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
 - текст `[PROJECT INSTRUCTIONS]` уже вставлен в поле `Project instructions`;
-- `[PROJECT PASSPORT]` уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
+- финальный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
 - повторная активация проекта сейчас не нужна.
 
 Что должно остаться в `Sources`:

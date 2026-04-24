@@ -1,6 +1,6 @@
 # CPO Copilot Setup Checklist
 Статус: CHECKLIST
-Обновлено: 2026-04-11
+Обновлено: 2026-04-24
 
 Отмечай пункт только после реальной проверки.
 
@@ -25,14 +25,19 @@
 [ ] Понятно, что copilot не должен решать без отдельного подтверждения
 
 ## 3B. Подготовлен Project passport
-[ ] Copilot в конце онбординга подготовил [PROJECT PASSPORT] Паспорт проекта
-[ ] Copilot прямо объяснил, что этот документ нужно сохранить отдельным markdown-файлом
-[ ] Паспорт сохранён и добавлен в Sources
+[ ] До draft passport собран Customer Value Chain Intake
+[ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
+[ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
+[ ] Copilot запустил Passport Challenge Review после draft passport
+[ ] Copilot помог выполнить Passport Hardening по результатам review
+[ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT]
+[ ] Copilot прямо объяснил, что только финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом
+[ ] Финальный паспорт сохранён и добавлен в Sources вручную
 
 ## 3C. Решение по setup-файлам после активации
 [ ] Понятно, что setup-файлы из `runtime/project_setup` можно убирать из Sources только после успешной активации
 [ ] Текст [PROJECT INSTRUCTIONS] уже вставлен в Project instructions
-[ ] [PROJECT PASSPORT] уже сохранён отдельным markdown-файлом и добавлен в Sources
+[ ] Финальный [PROJECT PASSPORT] после Passport Challenge Review и Passport Hardening уже сохранён отдельным markdown-файлом и добавлен в Sources
 [ ] Понятно, что в Sources должны остаться markdown-файлы из `runtime/core`, [PROJECT PASSPORT] и актуальные документы проекта
 [ ] Если повторная активация пока не нужна, setup-файлы из `runtime/project_setup` можно убрать из Sources
 
@@ -64,6 +69,11 @@
 [ ] Заполнено, что сейчас оптимизируем
 [ ] Заполнены ключевые сегменты
 [ ] Заполнена основная ценность продукта
+[ ] Заполнено, что нужно клиенту
+[ ] Заполнено, что даёт продукт
+[ ] Заполнено, что клиент с этим делает
+[ ] Заполнено, что клиент получает в измеримом результате
+[ ] Если Customer Value Chain не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
 [ ] Заполнена текущая бизнес-модель
 [ ] Заполнено, что уже понятно по выводу на рынок, если это релевантно
 [ ] Заполнены допущения по экономике, если это релевантно
@@ -85,6 +95,7 @@
 [ ] Указаны главный и дополнительные источники правды
 [ ] Указаны дата обновления, владелец обновления и триггеры обновления
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с product context
+[ ] [PROJECT PASSPORT] содержит Customer Value Chain
 [ ] [PROJECT PASSPORT] содержит PMF evidence или явное `not assessed`
 [ ] [PROJECT PASSPORT] содержит Hypothesis map
 
@@ -96,6 +107,8 @@
 [ ] Названы направления, которые уже рассматриваются
 [ ] Названы потенциальные аудитории
 [ ] Названы потенциальные проблемы или потребности
+[ ] Собрана кандидатная Customer Value Chain как гипотеза, а не подтверждённый product context
+[ ] Если кандидатная Customer Value Chain не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
 [ ] Зафиксированы уже существующие сигналы
 [ ] Разведены факты и допущения
 [ ] Названы ограничения и риски
@@ -103,6 +116,7 @@
 [ ] Назван следующий маленький тест
 [ ] Понятно, при каких условиях можно перейти в product mode
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с exploration context
+[ ] [PROJECT PASSPORT] содержит Candidate Customer Value Chain или явно фиксирует missing inputs
 
 ## 6. Источники правды реально подключены
 [ ] Подключены локальные документы, если они есть
@@ -129,6 +143,19 @@
 [ ] Copilot объясняет английские термины по-русски при первом упоминании
 [ ] Copilot не делает вид, что product context уже есть, если на самом деле идёт exploration mode
 [ ] Copilot не использует source docs как рабочую память проекта
+[ ] Copilot не считает первый Draft Project Passport финальным источником правды
+[ ] Copilot запускает Passport Challenge Review после draft passport
+[ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
+[ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
+[ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
+[ ] Review предлагает 2-3 варианта улучшения слабых формулировок
+[ ] Review рекомендует один вариант, если контекста достаточно
+[ ] Review маркирует факты, выводы, допущения, неопределённости и forbidden claims
+[ ] Review не представляет локальные адаптации как канон PAF
+[ ] Review не утверждает PMF, PCF, customer success или бизнес-эффект без evidence
+[ ] No Hidden Review Criteria соблюдено: отсутствие поля, которое onboarding не спрашивал, классифицируется как onboarding gap / missing input / needs follow-up
+[ ] Для старых паспортов доступен Retrospective Passport Review
+[ ] Copilot не обновляет Sources автоматически
 
 ## 8. Smoke tests
 
@@ -140,7 +167,7 @@
 [ ] Copilot принимает этот вход как валидный триггер
 [ ] Copilot не делает вид, что инструмент только для CPO
 [ ] Copilot сразу переходит к настройке
-[ ] Copilot в конце онбординга готовит Project instructions и Project passport
+[ ] Copilot после onboarding готовит Project instructions, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot
 
 ### Тест 1 — продукт уже есть
 Запрос:
@@ -235,6 +262,29 @@
 [ ] Сначала помогает прояснить суть идеи
 [ ] Не выдаёт тяжёлый checklist сразу
 [ ] Объясняет, что канонические проверки включатся при приближении к решению
+
+### Тест 10 — passport hardening после onboarding
+Запрос:
+«Мы прошли онбординг. Можно добавить паспорт в Sources?»
+
+Хороший ответ:
+[ ] Говорит, что первый паспорт — draft
+[ ] Проверяет, собрана ли Customer Value Chain
+[ ] Запускает Passport Challenge Review
+[ ] Находит critical и major weak points
+[ ] Предлагает 2-3 варианта улучшения ключевых формулировок
+[ ] Готовит Final Passport Snapshot только после hardening
+[ ] Объясняет, что финальный [PROJECT PASSPORT] пользователь сохраняет и добавляет в Sources вручную
+
+### Тест 11 — старый паспорт без Customer Value Chain
+Запрос:
+«Проверь старый паспорт проекта, в нём нет цепочки клиентской ценности.»
+
+Хороший ответ:
+[ ] Запускает Retrospective Passport Review
+[ ] Объясняет, что старый onboarding не собирал Customer Value Chain
+[ ] Классифицирует отсутствие customer action или customer outcome как onboarding gap / missing input / needs follow-up
+[ ] Не называет это ошибкой автора паспорта
 
 ## 9. Дисциплина обновления
 [ ] Понятно, кто обновляет контекст

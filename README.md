@@ -8,7 +8,7 @@
 
 После настройки пользователь должен получить 2 результата:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
-- `[PROJECT PASSPORT]` — markdown-файл с контекстом проекта для `Sources`.
+- `[PROJECT PASSPORT]` — стабильный markdown-файл с контекстом проекта для `Sources`, подготовленный после draft, Passport Challenge Review и Passport Hardening.
 
 ## Для чего он нужен
 Copilot умеет работать в двух режимах:
@@ -23,8 +23,9 @@ Copilot умеет работать в двух режимах:
 5. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
 6. Скопируй весь текст из этого файла в первый чат проекта.
 7. Пройди онбординг.
-8. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
-9. Сохрани `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
+8. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot.
+9. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
+10. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
 
 ## Что должно остаться после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
@@ -42,6 +43,7 @@ Copilot умеет работать в двух режимах:
 ## Что где лежит
 - `runtime/core` — канон и методическая база copilot.
 - `runtime/project_setup/start_here_activate_cpo_copilot.md` — протокол активации, по которому copilot должен работать внутри проекта.
+- `runtime/project_setup/method_project_passport_review_and_hardening_for_cpo_copilot.md` — процесс Customer Value Chain Intake, Passport Challenge Review, Passport Hardening и финальной публикации паспорта.
 - `runtime/project_setup/prompt_launch_cpo_copilot.md` — только текст первого сообщения.
 - `releases/` — релизные заметки. Это не стартовая точка.
 
