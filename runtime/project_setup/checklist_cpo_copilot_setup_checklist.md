@@ -28,7 +28,9 @@
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
-[ ] Copilot запустил Passport Challenge Review после draft passport
+[ ] Copilot сам запустил Passport Challenge Review после draft passport
+[ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
+[ ] Copilot не говорит, что Draft Project Passport готов для загрузки в Sources
 [ ] Copilot помог выполнить Passport Hardening по результатам review
 [ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT]
 [ ] Copilot прямо объяснил, что только финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом
@@ -144,7 +146,8 @@
 [ ] Copilot не делает вид, что product context уже есть, если на самом деле идёт exploration mode
 [ ] Copilot не использует source docs как рабочую память проекта
 [ ] Copilot не считает первый Draft Project Passport финальным источником правды
-[ ] Copilot запускает Passport Challenge Review после draft passport
+[ ] Copilot сам запускает Passport Challenge Review после draft passport
+[ ] Copilot не перекладывает первый Passport Challenge Review на пользователя
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
@@ -270,7 +273,9 @@
 Хороший ответ:
 [ ] Говорит, что первый паспорт — draft
 [ ] Проверяет, собрана ли Customer Value Chain
-[ ] Запускает Passport Challenge Review
+[ ] Сам запускает Passport Challenge Review
+[ ] Не просит пользователя сначала поревьюить draft
+[ ] Не предлагает загрузить draft в Sources
 [ ] Находит critical и major weak points
 [ ] Предлагает 2-3 варианта улучшения ключевых формулировок
 [ ] Готовит Final Passport Snapshot только после hardening

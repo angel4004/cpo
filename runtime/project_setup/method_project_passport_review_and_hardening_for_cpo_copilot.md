@@ -64,7 +64,8 @@ Need → Product Capability → Customer Action → Customer Outcome
 
 Copilot должен прямо сказать пользователю:
 - это draft, а не стабильный источник правды;
-- перед публикацией в Sources нужен Passport Challenge Review;
+- сейчас copilot сам проведёт Passport Challenge Review;
+- перед публикацией в Sources нужен Passport Challenge Review и Passport Hardening;
 - Sources не являются местом для промежуточных гипотез и рабочих черновиков.
 
 Draft Project Passport должен:
@@ -73,6 +74,23 @@ Draft Project Passport должен:
 - отделять факты, выводы, рекомендации, неопределённости, допущения и forbidden claims;
 - явно показывать unknown / missing inputs там, где данных не хватает;
 - не утверждать customer success, PMF, PCF или бизнес-эффект без evidence.
+
+Запрещено после Draft Project Passport:
+- просить пользователя самому сначала поревьюить draft;
+- говорить, что draft готов для загрузки в Sources;
+- называть draft финальным [PROJECT PASSPORT];
+- завершать ответ без Passport Challenge Review;
+- переносить ответственность за первый review на пользователя.
+
+Обязательный post-draft output:
+1. `[DRAFT PROJECT PASSPORT]`
+2. короткая фраза: `Это рабочий черновик, не publish artifact. Я сразу провожу Passport Challenge Review.`
+3. `[PASSPORT CHALLENGE REVIEW]`
+4. `[PASSPORT HARDENING OPTIONS]`, если найдены critical или major weak points
+5. только после hardening — `[FINAL PROJECT PASSPORT SNAPSHOT]`
+
+Если draft получился длинным, всё равно не говори, что он готов к Sources.
+В этом случае сделай compact Passport Challenge Review по critical и major weak points в том же ответе.
 
 ## Passport Challenge Review
 Passport Challenge Review обязателен после Draft Project Passport.

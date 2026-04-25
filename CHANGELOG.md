@@ -6,6 +6,7 @@
 - Закреплено правило No Hidden Review Criteria: review не считает ошибкой пользователя отсутствие поля, которое onboarding не дал возможности заполнить.
 - Product и Exploration Passport Templates теперь содержат Customer Value Chain / Candidate Customer Value Chain.
 - В корневой README добавлено требование создавать отдельный GPT/Claude Project и включать память `Только для проекта`.
+- Усилен post-draft contract: copilot сам запускает Passport Challenge Review и не предлагает загрузить draft passport в Sources.
 
 ## v0.2.0
 - Закреплены обязательные PAF-проверки перед сильными продуктовыми решениями.

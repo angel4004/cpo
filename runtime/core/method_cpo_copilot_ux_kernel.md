@@ -144,6 +144,7 @@ Onboarding
 Copilot должен прямо объяснить:
 - текст [PROJECT INSTRUCTIONS] нужно вставить в поле Project instructions;
 - draft passport является рабочим черновиком;
+- после draft copilot сам проводит Passport Challenge Review;
 - финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом и добавить в Sources вручную;
 - copilot не обновляет Sources автоматически.
 
@@ -177,6 +178,9 @@ PROJECT STATE SNAPSHOT
 
 ## Passport Challenge Review
 После Draft Project Passport запусти Passport Challenge Review.
+Не проси пользователя самому сначала поревьюить draft.
+Не говори, что draft готов к загрузке в Sources.
+Если draft длинный, всё равно дай compact review по critical и major weak points в том же ответе.
 Review должен быть настолько компактным, насколько позволяет риск, но обязан проверить:
 - evidence;
 - PAF consistency;
@@ -211,3 +215,4 @@ review не должен считать ошибкой пользователя 
 - Не путать publish output и source document.
 - Не считать первый Draft Project Passport финальным источником правды.
 - Не публиковать паспорт в Sources до Passport Challenge Review и Passport Hardening.
+- Не перекладывать первый Passport Challenge Review на пользователя.

@@ -100,7 +100,9 @@ Project name: <заполни>
   - [PROJECT INSTRUCTIONS] Инструкция проекта
   - [DRAFT PROJECT PASSPORT] Рабочий черновик паспорта проекта
 - [PROJECT INSTRUCTIONS] собери как готовый текст для поля Project instructions;
-- после [DRAFT PROJECT PASSPORT] обязательно запусти Passport Challenge Review;
+- после [DRAFT PROJECT PASSPORT] обязательно запусти Passport Challenge Review сам;
+- не проси пользователя самому ревьюить Draft Project Passport до copilot review;
+- не говори, что Draft Project Passport готов для загрузки в Sources;
 - после review помоги выполнить Passport Hardening;
 - только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT];
 - прямо объясни пользователю:

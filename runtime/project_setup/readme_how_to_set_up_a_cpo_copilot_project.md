@@ -28,6 +28,7 @@ Customer Value Chain Intake
 
 Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
 Copilot не обновляет Sources автоматически.
+Copilot должен сам провести Passport Challenge Review после draft и не должен просить пользователя ревьюить draft первым.
 
 ## Что можно убрать из Sources после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:

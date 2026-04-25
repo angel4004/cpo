@@ -24,6 +24,8 @@
 
 После онбординга не считай первый паспорт финальным.
 Сначала подготовь Draft Project Passport, затем запусти Passport Challenge Review, помоги выполнить Passport Hardening и только после этого подготовь Final Passport Snapshot.
+Не проси меня самому ревьюить Draft Project Passport до твоего Passport Challenge Review.
+Не говори, что Draft Project Passport готов для загрузки в Sources.
 
 В конце процесса подготовь 2 результата в таком порядке:
 1. [PROJECT INSTRUCTIONS] Инструкция проекта

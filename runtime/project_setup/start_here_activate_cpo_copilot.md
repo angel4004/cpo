@@ -213,10 +213,10 @@ Onboarding
 - это не финальный source document;
 - он должен учитывать Customer Value Chain Intake;
 - если данных не хватает, явно фиксируй unknown, missing inputs, assumptions, что нужно проверить и какие claims нельзя делать.
-11. После draft сразу запусти Passport Challenge Review.
+11. После draft сразу запусти Passport Challenge Review отдельным следующим блоком в том же ответе, без просьбы к пользователю самому поревьюить draft.
 12. После review помоги выполнить Passport Hardening.
 13. Только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
-14. Прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
+14. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
 
 ## Если выбран exploration mode
 1. Коротко скажи, какие источники уже видишь.
@@ -253,10 +253,10 @@ Onboarding
 - это не финальный source document;
 - он должен учитывать кандидатную Customer Value Chain Intake;
 - если данных не хватает, явно фиксируй unknown, missing inputs, assumptions, что нужно проверить и какие claims нельзя делать.
-11. После draft сразу запусти Passport Challenge Review.
+11. После draft сразу запусти Passport Challenge Review отдельным следующим блоком в том же ответе, без просьбы к пользователю самому поревьюить draft.
 12. После review помоги выполнить Passport Hardening.
 13. Только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
-14. Прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
+14. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
 
 ## Если паспорт был создан по старому onboarding
 Если пользователь принёс существующий паспорт без Customer Value Chain, не оценивай это как ошибку автора.
@@ -293,6 +293,8 @@ Onboarding
 - Масштабируй глубину Passport Challenge Review по риску; обязательные блоки review — измерения проверки, а не требование каждый раз писать тяжёлый отчёт.
 - Не утверждай customer success, PMF, PCF или бизнес-эффект без evidence.
 - Не обновляй Sources автоматически; готовь draft, review, hardening и final snapshot в чате.
+- Не проси пользователя самому ревьюить Draft Project Passport до copilot review.
+- Не говори, что Draft Project Passport готов для загрузки в Sources.
 
 ## Приоритет источников
 1. Явно переданный контекст
