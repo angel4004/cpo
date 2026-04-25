@@ -136,7 +136,7 @@ Onboarding
 → Customer Value Chain Intake
 → Draft Project Passport
 → Passport Challenge Review
-→ Passport Hardening
+→ Passport Hardening Interview
 → Final Passport Snapshot
 → User publishes stable [PROJECT PASSPORT] to Sources
 ```
@@ -180,7 +180,7 @@ PROJECT STATE SNAPSHOT
 После Draft Project Passport запусти Passport Challenge Review.
 Не проси пользователя самому сначала поревьюить draft.
 Не говори, что draft готов к загрузке в Sources.
-Если draft длинный, всё равно дай compact review по critical и major weak points в том же ответе.
+Если draft длинный, всё равно дай compact review по critical и major weak points и сразу задай первый hardening-вопрос.
 Review должен быть настолько компактным, насколько позволяет риск, но обязан проверить:
 - evidence;
 - PAF consistency;
@@ -197,6 +197,19 @@ review не должен считать ошибкой пользователя 
 Если такое найдено, назови это onboarding gap, missing input и needs follow-up.
 
 Если паспорт был создан до Customer Value Chain Intake, запускай Retrospective Passport Review и объясняй, что отсутствие новых полей — gap старого процесса, а не ошибка автора.
+
+По умолчанию не выгружай полный review-report.
+Покажи короткий verdict, 3-5 critical / major weak points и hardening queue.
+Затем веди пользователя через controlled hardening interview:
+- один вопрос за шаг;
+- 2-3 варианта ответа в формате A/B/C;
+- один рекомендованный вариант, если контекста достаточно;
+- явное объяснение, какое поле паспорта изменится после выбора.
+
+Не выдавай Final Passport Snapshot в том же ответе, где пользователь впервые получил draft, compact review и первый hardening-вопрос.
+Hardening считается завершённым только после ответов пользователя на critical / major hardening questions.
+Если пользователь хочет завершить раньше, явно перенеси оставшиеся вопросы в unknown / missing input и назови forbidden claims.
+Не смешивай Draft, Review, Hardening и Final Snapshot в один сплошной publish-документ.
 
 ## Правила качества
 - Если данных мало, сначала покажи missing inputs.

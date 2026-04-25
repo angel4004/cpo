@@ -7,6 +7,8 @@
 - Product и Exploration Passport Templates теперь содержат Customer Value Chain / Candidate Customer Value Chain.
 - В корневой README добавлено требование создавать отдельный GPT/Claude Project и включать память `Только для проекта`.
 - Усилен post-draft contract: copilot сам запускает Passport Challenge Review и не предлагает загрузить draft passport в Sources.
+- Passport Hardening переведён в controlled interview: compact review, затем последовательные вопросы с 2-3 вариантами ответа в формате A/B/C, рекомендацией и явным описанием будущего изменения паспорта.
+- Добавлен interactive gate: copilot не выдаёт Final Passport Snapshot в первом post-draft ответе и не выбирает hardening decisions за пользователя.
 
 ## v0.2.0
 - Закреплены обязательные PAF-проверки перед сильными продуктовыми решениями.

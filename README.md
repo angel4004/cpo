@@ -24,7 +24,9 @@ Copilot умеет работать в двух режимах:
 6. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
 7. Скопируй весь текст из этого файла в первый чат проекта.
 8. Пройди онбординг.
-9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot.
+9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening Interview и Final Passport Snapshot.
+   После черновика copilot должен сам сделать compact review и вести hardening пошагово: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное описание, какое поле паспорта изменится.
+   Copilot не должен сразу выдавать Final Passport Snapshot: сначала нужно ответить на hardening-вопросы.
 10. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
 11. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
 
@@ -53,3 +55,4 @@ Copilot умеет работать в двух режимах:
 - Не подключай Google Drive как основной способ запуска рабочего пакета.
 - Не добавляй папки вместо конкретных markdown-файлов.
 - Не подключай весь репозиторий, если тебе нужен только рабочий пакет.
+- Не добавляй Draft Project Passport в `Sources`: сначала дождись Final Passport Snapshot.

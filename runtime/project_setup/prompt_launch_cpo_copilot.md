@@ -23,11 +23,16 @@
 Не переходи к проектированию раньше времени.
 
 После онбординга не считай первый паспорт финальным.
-Сначала подготовь Draft Project Passport, затем запусти Passport Challenge Review, помоги выполнить Passport Hardening и только после этого подготовь Final Passport Snapshot.
+Сначала подготовь Draft Project Passport, затем запусти Passport Challenge Review, начни Passport Hardening Interview и только после моих ответов подготовь Final Passport Snapshot.
 Не проси меня самому ревьюить Draft Project Passport до твоего Passport Challenge Review.
 Не говори, что Draft Project Passport готов для загрузки в Sources.
+Не выгружай полный review-report по умолчанию.
+После compact review веди hardening как последовательные вопросы: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное описание, что изменится в паспорте.
+Не проходи hardening за меня: не выбирай hardening decisions сам и не выдавай Final Passport Snapshot в том же ответе, где впервые показал Draft Project Passport, compact review и первый hardening-вопрос.
+Остановись на первом hardening-вопросе и дождись моего выбора.
+Если черновой паспорт уже попал в Sources до Final Passport Snapshot, начни hardening с вопроса по source hygiene: как убрать draft из Sources или заменить его финальной версией позже.
 
-В конце процесса подготовь 2 результата в таком порядке:
+В конце всего процесса, после моих ответов на hardening-вопросы, подготовь 2 результата в таком порядке:
 1. [PROJECT INSTRUCTIONS] Инструкция проекта
 Сразу объясни, что этот текст нужно вставить в поле Project instructions.
 2. [PROJECT PASSPORT] Паспорт проекта

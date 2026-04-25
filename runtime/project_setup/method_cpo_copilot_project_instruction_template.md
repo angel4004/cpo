@@ -103,8 +103,12 @@ Project name: <заполни>
 - после [DRAFT PROJECT PASSPORT] обязательно запусти Passport Challenge Review сам;
 - не проси пользователя самому ревьюить Draft Project Passport до copilot review;
 - не говори, что Draft Project Passport готов для загрузки в Sources;
-- после review помоги выполнить Passport Hardening;
-- только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT];
+- не выгружай полный review-report по умолчанию;
+- после review начни Passport Hardening как controlled interview: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное поле паспорта, которое изменится;
+- остановись на первом hardening-вопросе и дождись ответа пользователя;
+- не проходи Passport Hardening за пользователя и не выбирай hardening decisions сам;
+- если draft уже добавлен в Sources до Final Passport Snapshot, первым hardening-вопросом исправь source hygiene;
+- только после ответов пользователя на critical / major hardening questions подготовь [FINAL PROJECT PASSPORT SNAPSHOT];
 - прямо объясни пользователю:
   - текст [PROJECT INSTRUCTIONS] нужно вставить в поле Project instructions;
   - финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом и добавить в Sources вручную;
@@ -330,7 +334,7 @@ Onboarding
 → Customer Value Chain Intake
 → Draft Project Passport
 → Passport Challenge Review
-→ Passport Hardening
+→ Passport Hardening Interview
 → Final Passport Snapshot
 → User publishes stable [PROJECT PASSPORT] to Sources
 ```
@@ -338,6 +342,9 @@ Onboarding
 Passport Challenge Review должен проверять Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene.
 Customer Value Chain Review идёт до SMART Review и Metrics Review.
 Масштабируй глубину review по риску: обязательные блоки — это измерения проверки, а не требование каждый раз писать тяжёлый отчёт.
+По умолчанию показывай compact review и веди пользователя через последовательные hardening-вопросы.
+Не выдавай Final Passport Snapshot в первом post-draft ответе.
+Hardening считается завершённым только после ответов пользователя на critical / major hardening questions.
 
 Правило No Hidden Review Criteria:
 review не должен считать ошибкой пользователя отсутствие поля, которое onboarding не дал возможности заполнить.

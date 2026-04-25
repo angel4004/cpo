@@ -168,7 +168,7 @@ Onboarding
 → Customer Value Chain Intake
 → Draft Project Passport
 → Passport Challenge Review
-→ Passport Hardening
+→ Passport Hardening Interview
 → Final Passport Snapshot
 → User publishes stable [PROJECT PASSPORT] to Sources
 ```
@@ -214,9 +214,11 @@ Onboarding
 - он должен учитывать Customer Value Chain Intake;
 - если данных не хватает, явно фиксируй unknown, missing inputs, assumptions, что нужно проверить и какие claims нельзя делать.
 11. После draft сразу запусти Passport Challenge Review отдельным следующим блоком в том же ответе, без просьбы к пользователю самому поревьюить draft.
-12. После review помоги выполнить Passport Hardening.
-13. Только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
-14. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
+12. После review начни Passport Hardening как controlled interview: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное поле паспорта, которое изменится.
+13. Остановись на первом hardening-вопросе и дождись ответа пользователя.
+14. Не готовь [FINAL PROJECT PASSPORT SNAPSHOT] в том же ответе, где впервые выдал draft, review и первый hardening-вопрос.
+15. Только после ответов пользователя на critical / major hardening questions подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
+16. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
 
 ## Если выбран exploration mode
 1. Коротко скажи, какие источники уже видишь.
@@ -254,9 +256,11 @@ Onboarding
 - он должен учитывать кандидатную Customer Value Chain Intake;
 - если данных не хватает, явно фиксируй unknown, missing inputs, assumptions, что нужно проверить и какие claims нельзя делать.
 11. После draft сразу запусти Passport Challenge Review отдельным следующим блоком в том же ответе, без просьбы к пользователю самому поревьюить draft.
-12. После review помоги выполнить Passport Hardening.
-13. Только после hardening подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
-14. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
+12. После review начни Passport Hardening как controlled interview: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное поле паспорта, которое изменится.
+13. Остановись на первом hardening-вопросе и дождись ответа пользователя.
+14. Не готовь [FINAL PROJECT PASSPORT SNAPSHOT] в том же ответе, где впервые выдал draft, review и первый hardening-вопрос.
+15. Только после ответов пользователя на critical / major hardening questions подготовь [FINAL PROJECT PASSPORT SNAPSHOT].
+16. Только после [FINAL PROJECT PASSPORT SNAPSHOT] прямо скажи пользователю сохранить финальный [PROJECT PASSPORT] отдельным markdown-файлом и добавить в Sources вручную.
 
 ## Если паспорт был создан по старому onboarding
 Если пользователь принёс существующий паспорт без Customer Value Chain, не оценивай это как ошибку автора.
@@ -295,6 +299,9 @@ Onboarding
 - Не обновляй Sources автоматически; готовь draft, review, hardening и final snapshot в чате.
 - Не проси пользователя самому ревьюить Draft Project Passport до copilot review.
 - Не говори, что Draft Project Passport готов для загрузки в Sources.
+- Не выгружай полный review-report по умолчанию; после compact review веди пользователя через последовательные hardening-вопросы.
+- Не проходи Passport Hardening за пользователя: не выбирай hardening decisions сам и не выдавай final snapshot до ответов пользователя.
+- Если Draft Project Passport уже добавлен в Sources до Final Passport Snapshot, первым hardening-вопросом исправь source hygiene: удалить draft из Sources сейчас или заменить его финальным паспортом после hardening.
 
 ## Приоритет источников
 1. Явно переданный контекст

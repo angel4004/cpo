@@ -22,13 +22,15 @@
 Customer Value Chain Intake
 → Draft Project Passport
 → Passport Challenge Review
-→ Passport Hardening
+→ Passport Hardening Interview
 → Final Passport Snapshot
 ```
 
 Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
 Copilot не обновляет Sources автоматически.
 Copilot должен сам провести Passport Challenge Review после draft и не должен просить пользователя ревьюить draft первым.
+После compact review copilot должен вести Passport Hardening как controlled interview: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное описание, какое поле паспорта изменится.
+Copilot не должен сразу выдавать Final Passport Snapshot: сначала пользователь отвечает на hardening-вопросы.
 
 ## Что можно убрать из Sources после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:

@@ -31,8 +31,15 @@
 [ ] Copilot сам запустил Passport Challenge Review после draft passport
 [ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
 [ ] Copilot не говорит, что Draft Project Passport готов для загрузки в Sources
-[ ] Copilot помог выполнить Passport Hardening по результатам review
-[ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT]
+[ ] Copilot не выгружает полный review-report по умолчанию
+[ ] Copilot помог выполнить Passport Hardening как controlled interview
+[ ] Hardening идёт один вопрос за шаг
+[ ] Каждый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант, если контекста достаточно
+[ ] Каждый hardening-вопрос объясняет, какое поле паспорта изменится
+[ ] Copilot останавливается на первом hardening-вопросе и ждёт ответа пользователя
+[ ] Copilot не выбирает hardening decisions за пользователя
+[ ] Если draft уже добавлен в Sources, первый hardening-вопрос исправляет source hygiene
+[ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT] только после ответов пользователя на critical / major hardening questions
 [ ] Copilot прямо объяснил, что только финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом
 [ ] Финальный паспорт сохранён и добавлен в Sources вручную
 
@@ -148,11 +155,14 @@
 [ ] Copilot не считает первый Draft Project Passport финальным источником правды
 [ ] Copilot сам запускает Passport Challenge Review после draft passport
 [ ] Copilot не перекладывает первый Passport Challenge Review на пользователя
+[ ] Copilot не выгружает полный review-report по умолчанию, если достаточно compact review
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
-[ ] Review предлагает 2-3 варианта улучшения слабых формулировок
-[ ] Review рекомендует один вариант, если контекста достаточно
+[ ] Hardening-вопросы предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C
+[ ] Hardening-вопросы рекомендуют один вариант, если контекста достаточно
+[ ] Copilot не выбирает hardening decisions за пользователя
+[ ] Final Passport Snapshot не появляется в первом post-draft ответе до ответов пользователя
 [ ] Review маркирует факты, выводы, допущения, неопределённости и forbidden claims
 [ ] Review не представляет локальные адаптации как канон PAF
 [ ] Review не утверждает PMF, PCF, customer success или бизнес-эффект без evidence
@@ -170,7 +180,7 @@
 [ ] Copilot принимает этот вход как валидный триггер
 [ ] Copilot не делает вид, что инструмент только для CPO
 [ ] Copilot сразу переходит к настройке
-[ ] Copilot после onboarding готовит Project instructions, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot
+[ ] Copilot после onboarding готовит Project instructions, Draft Project Passport, Passport Challenge Review, Passport Hardening и Final Passport Snapshot как последовательный процесс, а не одним сплошным ответом
 
 ### Тест 1 — продукт уже есть
 Запрос:
@@ -277,8 +287,14 @@
 [ ] Не просит пользователя сначала поревьюить draft
 [ ] Не предлагает загрузить draft в Sources
 [ ] Находит critical и major weak points
-[ ] Предлагает 2-3 варианта улучшения ключевых формулировок
-[ ] Готовит Final Passport Snapshot только после hardening
+[ ] Не выгружает полный review-report по умолчанию
+[ ] Задаёт первый hardening-вопрос
+[ ] Первый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант
+[ ] Первый hardening-вопрос объясняет, какое поле паспорта изменится
+[ ] Останавливается на первом hardening-вопросе и не выдаёт Final Passport Snapshot в том же ответе
+[ ] Не выбирает hardening decisions за пользователя
+[ ] Если пользователь уже добавил draft в Sources, первый вопрос касается удаления draft из Sources или замены его финальным паспортом после hardening
+[ ] Готовит Final Passport Snapshot только после ответов пользователя на hardening-вопросы
 [ ] Объясняет, что финальный [PROJECT PASSPORT] пользователь сохраняет и добавляет в Sources вручную
 
 ### Тест 11 — старый паспорт без Customer Value Chain
