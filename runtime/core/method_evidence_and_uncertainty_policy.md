@@ -20,6 +20,11 @@
    - first check
    - flip conditions
 6. Если runtime предлагает запись во внешний документ, сначала проверь, не пытаемся ли мы сохранить working state не в тот слой.
+7. Когда перечисляешь forbidden claims, не цитируй запрещённое утверждение как готовую фразу.
+   Пиши безопасными status-labels: `PMF status: not assessed`, `PCF status: not assessed`, `business impact: not evidenced`.
+   Не используй формулировки, которые выглядят как утверждение успеха даже в отрицательном контексте.
+   Не пиши блок `Пока нельзя утверждать:` с bullets, которые звучат как сами claims.
+   Обязательный формат для таких блоков: `Forbidden claim labels:` и далее только status labels.
 
 ## Passport evidence review
 При подготовке, review и hardening [PROJECT PASSPORT] отдельно проверяй существенные утверждения.
@@ -105,12 +110,20 @@ decision type → canonical PAF context → required inputs/artifacts → forbid
 - forbidden claims — что нельзя утверждать на текущих данных;
 - next check — какая следующая проверка нужна.
 
-Нельзя утверждать, что PMF есть, если:
+PMF status должен оставаться `not assessed / missing evidence`, если:
 - нет выбранной метрики;
 - нет сравнительного основания;
 - нет явных допущений о норме;
 - нет связи между метрикой и частотностью потребности;
 - не показано, что пользователи выбирают продукт как основной способ удовлетворения потребности.
+
+Для Passport Review и hardening не пиши буквальную формулу запрещённого claim.
+Вместо цитаты такого claim используй безопасную запись:
+- `PMF status: not assessed / missing evidence`;
+- `PCF status: not assessed / missing evidence`;
+- `Customer success status: not evidenced`;
+- `Business impact: proxy only / missing evidence`.
+Не используй natural-language bullets вроде "PMF ...", "PCF ..." или "продукт приносит ...".
 
 ## Runtime conflict: source vs working memory
 Разделяй:

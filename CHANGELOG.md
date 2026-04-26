@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## Unreleased
+- Evidence gaps после Customer Value Chain Intake теперь должны идти в Draft Project Passport → Passport Challenge Review → Passport Hardening Interview, а не в дополнительный intake по метрикам.
+- Ready-to-send письма, task, request, checklist, interview scripts, survey guides и question banks больше не должны содержать серию вопросов с `?`; подтверждаемые пункты оформляются как labels/prompts.
 - Добавлен Customer Value Chain Intake перед Draft Project Passport.
 - Добавлен Passport Challenge Review, Passport Hardening, Final Passport Snapshot и Retrospective Passport Review для старых паспортов.
 - Закреплено правило No Hidden Review Criteria: review не считает ошибкой пользователя отсутствие поля, которое onboarding не дал возможности заполнить.

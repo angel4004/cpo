@@ -32,7 +32,7 @@
 [ ] Copilot сам запустил Passport Challenge Review после draft passport в том же assistant-turn, а не только пообещал сделать review позже
 [ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[DRAFT PROJECT PASSPORT]`
 [ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
-[ ] Copilot не говорит, что Draft Project Passport готов для загрузки в Sources
+[ ] Copilot не связывает Draft Project Passport с публикацией в Sources
 [ ] Copilot не выгружает полный review-report по умолчанию
 [ ] Copilot помог выполнить Passport Hardening как controlled interview в том же post-draft assistant-turn, если review нашёл critical / major weak points
 [ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[PASSPORT CHALLENGE REVIEW]`
@@ -67,6 +67,16 @@
 [ ] Copilot не ждёт, что пользователь сам догадается, что именно туда добавлять
 [ ] Copilot спокойно принимает ответ `unknown` или `не знаю`, если пользователь чего-то не знает
 
+## 4B. Evidence gaps and one-question UX
+[ ] Если после Customer Value Chain Intake не хватает evidence по PMF, PCF, customer success, business impact, baseline или target metric, copilot не продолжает обычный intake новыми уточнениями
+[ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim
+[ ] Первый вопрос по evidence gap оформлен как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`
+[ ] Если пользователь говорит, что паспорт уже есть в Sources, но имя/содержимое не видно явно, copilot начинает hardening по Source hygiene / Passport visibility, а не ordinary intake про путь
+[ ] Ready-to-send письма, task, request и checklist не содержат разделов с несколькими вопросами через `?`
+[ ] Внутренние пункты таких артефактов оформлены как labels / пункты для подтверждения без вопросительных знаков
+[ ] Interview scripts, survey guides и question banks в onboarding/hardening оформлены как prompts / labels без `?`
+[ ] Hardening queue items оформлены как noun phrases / decision areas без `?`
+
 ## 5A. Если выбран product mode
 [ ] Заполнено название проекта
 [ ] Заполнено, что это за продукт в одной фразе
@@ -78,7 +88,7 @@
 [ ] Заполнен статус запуска
 [ ] Заполнены цели на длинный горизонт
 [ ] Заполнены цели на ближайший горизонт
-[ ] Заполнен главный вопрос сейчас
+[ ] Заполнен Next decision area сейчас
 [ ] Заполнен горизонт решения
 [ ] Заполнено, что сейчас оптимизируем
 [ ] Заполнены ключевые сегменты
