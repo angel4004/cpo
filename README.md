@@ -1,14 +1,14 @@
 # CPO copilot
 
 ## Что это
-Это рабочий markdown-пакет для запуска продуктового copilot внутри GPT Project.
+Это рабочий markdown-пакет для запуска продуктового copilot внутри GPT Project или Claude Project.
 
 Это не обычное приложение.
 Его не нужно запускать локально через `Run`.
 
 После настройки пользователь должен получить 2 результата:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
-- `[PROJECT PASSPORT]` — markdown-файл с контекстом проекта для `Sources`.
+- `[PROJECT PASSPORT]` — стабильный markdown-файл с контекстом проекта для `Sources`, подготовленный после draft, Passport Challenge Review и Passport Hardening.
 
 ## Для чего он нужен
 Copilot умеет работать в двух режимах:
@@ -16,15 +16,21 @@ Copilot умеет работать в двух режимах:
 - `exploration mode` — когда продукта ещё нет и нужно выбрать направление.
 
 ## Как запустить
-1. Создай новый GPT Project. [обязательно нажмите на шестеркнку и выберите память "только для проекта"]
-2. Скачай все `.md`-файлы из `runtime/core`.
-3. Скачай все `.md`-файлы из `runtime/project_setup`.
-4. Добавь эти файлы в `Sources` своего GPT Project.
-5. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
-6. Скопируй весь текст из этого файла в первый чат проекта.
-7. Пройди онбординг.
-8. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
-9. Сохрани `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
+1. Создай новый GPT Project или Claude Project.
+2. В настройках памяти выбери режим `Только для проекта`. Не используй глобальную память для контекста CPO Copilot.
+3. Скачай все `.md`-файлы из `runtime/core`.
+4. Скачай все `.md`-файлы из `runtime/project_setup`.
+5. Добавь эти файлы в `Sources` / project knowledge своего проекта.
+6. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
+7. Скопируй весь текст из этого файла в первый чат проекта.
+8. Пройди онбординг.
+9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening Interview и Final Passport Snapshot.
+   После черновика copilot должен в том же assistant-turn сам вывести `[PASSPORT CHALLENGE REVIEW]` и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]`.
+   Stage-маркеры должны быть standalone-строками без пробелов внутри квадратных скобок и без suffix на той же строке.
+   Hardening идёт пошагово: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
+   Copilot не должен сразу выдавать Final Passport Snapshot: сначала нужно ответить на hardening-вопросы.
+10. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
+11. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
 
 ## Что должно остаться после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
@@ -42,6 +48,7 @@ Copilot умеет работать в двух режимах:
 ## Что где лежит
 - `runtime/core` — канон и методическая база copilot.
 - `runtime/project_setup/start_here_activate_cpo_copilot.md` — протокол активации, по которому copilot должен работать внутри проекта.
+- `runtime/project_setup/method_project_passport_review_and_hardening_for_cpo_copilot.md` — процесс Customer Value Chain Intake, Passport Challenge Review, Passport Hardening и финальной публикации паспорта.
 - `runtime/project_setup/prompt_launch_cpo_copilot.md` — только текст первого сообщения.
 - `releases/` — релизные заметки. Это не стартовая точка.
 
@@ -50,3 +57,4 @@ Copilot умеет работать в двух режимах:
 - Не подключай Google Drive как основной способ запуска рабочего пакета.
 - Не добавляй папки вместо конкретных markdown-файлов.
 - Не подключай весь репозиторий, если тебе нужен только рабочий пакет.
+- Не добавляй Draft Project Passport в `Sources`: сначала дождись Final Passport Snapshot.

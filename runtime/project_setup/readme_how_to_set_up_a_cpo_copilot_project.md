@@ -5,19 +5,41 @@
 Если ты читаешь репозиторий руками, главная точка входа — [README.md](../../README.md).
 
 ## Роль setup-файлов
-- [START HERE] Activate CPO Copilot — главный протокол активации внутри GPT Project.
+- [START HERE] Activate CPO Copilot — главный протокол активации внутри GPT Project или Claude Project.
 - [PROMPT] Launch CPO Copilot — только текст первого сообщения в чат.
 - Этот файл — короткая памятка о том, что должно получиться после активации.
+- Создание GPT/Claude Project и настройка памяти описаны в корневом [README.md](../../README.md).
 
 ## Что должно получиться после активации
-В конце онбординга copilot должен выдать 2 результата:
+После онбординга copilot должен провести draft/review/hardening и выдать 2 результата:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
-- `[PROJECT PASSPORT]` — markdown-файл, который нужно сохранить и добавить в `Sources`.
+- `[PROJECT PASSPORT]` — финальный стабильный markdown-файл, который нужно сохранить и добавить в `Sources`.
+
+Первый паспорт после onboarding — это Draft Project Passport, а не финальный source document.
+До публикации в Sources должны пройти:
+
+```text
+Customer Value Chain Intake
+→ Draft Project Passport
+→ Passport Challenge Review
+→ Passport Hardening Interview
+→ Final Passport Snapshot
+```
+
+Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
+Copilot не обновляет Sources автоматически.
+Copilot должен сам провести Passport Challenge Review после draft и не должен просить пользователя ревьюить draft первым.
+После draft copilot должен в том же assistant-turn фактически вывести `[PASSPORT CHALLENGE REVIEW]` и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]`.
+Нельзя завершать post-draft ответ обещанием "сейчас проведу review" без фактического review/hardening-блока.
+Stage-маркеры должны быть standalone-строками ровно в таком виде: `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`.
+Пробелы внутри квадратных скобок, suffix вроде `compact` / `Question 1/3` и объединённые заголовки недопустимы.
+После compact review copilot должен вести Passport Hardening как controlled interview: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
+Copilot не должен сразу выдавать Final Passport Snapshot: сначала пользователь отвечает на hardening-вопросы.
 
 ## Что можно убрать из Sources после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
 - текст `[PROJECT INSTRUCTIONS]` уже вставлен в поле `Project instructions`;
-- `[PROJECT PASSPORT]` уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
+- финальный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
 - повторная активация проекта сейчас не нужна.
 
 Что должно остаться в `Sources`:

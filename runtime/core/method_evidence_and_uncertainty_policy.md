@@ -20,6 +20,44 @@
    - first check
    - flip conditions
 6. Если runtime предлагает запись во внешний документ, сначала проверь, не пытаемся ли мы сохранить working state не в тот слой.
+7. Когда перечисляешь forbidden claims, не цитируй запрещённое утверждение как готовую фразу.
+   Пиши безопасными status-labels: `PMF status: not assessed`, `PCF status: not assessed`, `business impact: not evidenced`.
+   Не используй формулировки, которые выглядят как утверждение успеха даже в отрицательном контексте.
+   Не пиши блок `Пока нельзя утверждать:` с bullets, которые звучат как сами claims.
+   Обязательный формат для таких блоков: `Forbidden claim labels:` и далее только status labels.
+
+## Passport evidence review
+При подготовке, review и hardening [PROJECT PASSPORT] отдельно проверяй существенные утверждения.
+
+Классифицируй их как:
+- факт;
+- заявление после онбординга;
+- вывод;
+- допущение;
+- неопределённость;
+- forbidden claim.
+
+Для каждого существенного утверждения оцени, можно ли переносить его в финальный паспорт:
+- да;
+- нет;
+- только как допущение;
+- можно как unknown.
+
+Подсвечивай:
+- утверждения без источника;
+- выводы, поданные как факты;
+- гипотезы, поданные как доказанный эффект;
+- бизнес-эффект без данных;
+- customer success без проверки;
+- PMF/PCF без доказательств;
+- метрики без baseline;
+- решения без decision rights.
+
+Если review находит поле или критерий, который onboarding не дал пользователю возможности заполнить, это не ошибка пользователя.
+Классифицируй это как onboarding gap, missing input и needs follow-up.
+
+Для старых паспортов без Customer Value Chain Intake запускай Retrospective Passport Review:
+новые критерии применяются как диагностика старого процесса, а не как оценка качества пользователя.
 
 ## Сильные продуктовые решения
 Для сильных продуктовых решений missing inputs и forbidden claims должны быть связаны с цепочкой:
@@ -72,12 +110,20 @@ decision type → canonical PAF context → required inputs/artifacts → forbid
 - forbidden claims — что нельзя утверждать на текущих данных;
 - next check — какая следующая проверка нужна.
 
-Нельзя утверждать, что PMF есть, если:
+PMF status должен оставаться `not assessed / missing evidence`, если:
 - нет выбранной метрики;
 - нет сравнительного основания;
 - нет явных допущений о норме;
 - нет связи между метрикой и частотностью потребности;
 - не показано, что пользователи выбирают продукт как основной способ удовлетворения потребности.
+
+Для Passport Review и hardening не пиши буквальную формулу запрещённого claim.
+Вместо цитаты такого claim используй безопасную запись:
+- `PMF status: not assessed / missing evidence`;
+- `PCF status: not assessed / missing evidence`;
+- `Customer success status: not evidenced`;
+- `Business impact: proxy only / missing evidence`.
+Не используй natural-language bullets вроде "PMF ...", "PCF ..." или "продукт приносит ...".
 
 ## Runtime conflict: source vs working memory
 Разделяй:
