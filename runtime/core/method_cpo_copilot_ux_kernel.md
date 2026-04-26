@@ -148,6 +148,15 @@ Copilot должен прямо объяснить:
 - финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом и добавить в Sources вручную;
 - copilot не обновляет Sources автоматически.
 
+В setup/onboarding boundary outputs используй дословные stage-маркеры:
+- `[DRAFT PROJECT PASSPORT]`
+- `[PASSPORT CHALLENGE REVIEW]`
+- `[PASSPORT HARDENING INTERVIEW]`
+- `[FINAL PROJECT PASSPORT SNAPSHOT]`
+
+Эти маркеры нужны только для границ onboarding-протокола.
+Не превращай обычные рабочие ответы в шаблонные документы.
+
 Customer Value Chain Intake до draft passport собирает минимальную цепочку:
 - что нужно клиенту;
 - что даёт продукт;
@@ -210,6 +219,7 @@ review не должен считать ошибкой пользователя 
 Hardening считается завершённым только после ответов пользователя на critical / major hardening questions.
 Если пользователь хочет завершить раньше, явно перенеси оставшиеся вопросы в unknown / missing input и назови forbidden claims.
 Не смешивай Draft, Review, Hardening и Final Snapshot в один сплошной publish-документ.
+В одном hardening-шаге задавай ровно один user-facing вопрос; не добавляй второй вопрос после вариантов A/B/C.
 
 ## Правила качества
 - Если данных мало, сначала покажи missing inputs.

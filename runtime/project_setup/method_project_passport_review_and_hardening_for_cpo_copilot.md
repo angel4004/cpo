@@ -84,6 +84,10 @@ Draft Project Passport должен:
 - сразу выдавать `[FINAL PROJECT PASSPORT SNAPSHOT]`, если пользователь ещё не ответил на hardening-вопросы;
 - самостоятельно выбирать hardening decisions за пользователя, кроме безопасных маркировок unknown / assumption / forbidden claim.
 
+Stage-маркеры ниже являются output contract для onboarding-протокола.
+Пиши их дословно отдельными строками или markdown-заголовками.
+Не заменяй их синонимами и не объединяй несколько стадий под одним общим заголовком.
+
 Обязательный первый post-draft output:
 1. `[DRAFT PROJECT PASSPORT]`
 2. короткая фраза: `Это рабочий черновик, не publish artifact. Я сразу провожу Passport Challenge Review.`
@@ -101,6 +105,7 @@ Draft Project Passport должен:
 
 Если draft получился длинным, всё равно не говори, что он готов к Sources.
 В этом случае сделай compact Passport Challenge Review по critical и major weak points и сразу задай первый hardening-вопрос.
+Если critical / major weak points не найдены, не выдумывай hardening-вопросы: явно скажи, что publish blockers не найдены, и переходи к следующему безопасному шагу по протоколу.
 
 ## Passport Challenge Review
 Passport Challenge Review обязателен после Draft Project Passport.
@@ -414,7 +419,7 @@ Copilot не должен сам проходить quiz за пользоват
 Формат hardening-вопроса:
 
 ```markdown
-## Passport Hardening Interview
+## [PASSPORT HARDENING INTERVIEW]
 
 ### Question N/M: <короткое название>
 
@@ -443,6 +448,10 @@ C. <вариант C>
 
 **Ответь A/B/C или дай свою формулировку. После этого я покажу patch к паспорту и перейду к следующему вопросу.**
 ```
+
+В одном hardening-шаге должен быть ровно один user-facing вопрос.
+Не добавляй второй вопрос после вариантов A/B/C.
+Если нужно уточнить несколько полей, создай отдельные hardening questions и задавай их последовательно.
 
 Если пользователь выбрал вариант:
 - не спорь с выбранным вариантом без причины;

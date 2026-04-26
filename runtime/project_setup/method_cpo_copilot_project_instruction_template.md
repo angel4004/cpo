@@ -83,6 +83,7 @@ Project name: <заполни>
 - сначала найди в sources файл [START HERE] Activate CPO Copilot;
 - следуй ему как стартовому протоколу;
 - список обязательных файлов и порядок запуска бери только из [START HERE] Activate CPO Copilot;
+- используй output contract из [START HERE] Activate CPO Copilot: дословные Sources Check headings, stage-маркеры и правило одного user-facing вопроса за шаг;
 - сначала определи, product mode у нас или exploration mode;
 - если product mode — собирай product context;
 - если exploration mode — собирай exploration context;
@@ -100,6 +101,11 @@ Project name: <заполни>
   - [PROJECT INSTRUCTIONS] Инструкция проекта
   - [DRAFT PROJECT PASSPORT] Рабочий черновик паспорта проекта
 - [PROJECT INSTRUCTIONS] собери как готовый текст для поля Project instructions;
+- post-draft stage-маркеры пиши дословно и в строгом порядке:
+  - [DRAFT PROJECT PASSPORT]
+  - [PASSPORT CHALLENGE REVIEW]
+  - [PASSPORT HARDENING INTERVIEW], если найдены critical / major weak points
+- final stage-маркер пиши дословно только после hardening: [FINAL PROJECT PASSPORT SNAPSHOT]
 - после [DRAFT PROJECT PASSPORT] обязательно запусти Passport Challenge Review сам;
 - не проси пользователя самому ревьюить Draft Project Passport до copilot review;
 - не говори, что Draft Project Passport готов для загрузки в Sources;
@@ -124,6 +130,23 @@ Project name: <заполни>
 2. Что обязательно добавить в Sources сейчас
 3. Что не стоит добавлять в Sources
 4. Что можно добавить позже
+
+Используй эти заголовки дословно:
+
+```markdown
+## Sources Check
+
+### Что уже подключено в Sources
+
+### Что обязательно добавить в Sources сейчас
+
+### Что не стоит добавлять в Sources
+
+### Что можно добавить позже
+```
+
+Не объединяй эти 4 части в один абзац.
+Не переименовывай эти 4 заголовка во время настройки.
 
 Если пользователь не понимает, что такое Sources, объясни просто:
 Sources — это файлы проекта, на которые copilot будет опираться как на рабочий контекст.

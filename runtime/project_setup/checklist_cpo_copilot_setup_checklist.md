@@ -27,13 +27,17 @@
 ## 3B. Подготовлен Project passport
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
+[ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно
 [ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
 [ ] Copilot сам запустил Passport Challenge Review после draft passport
+[ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно и идёт после `[DRAFT PROJECT PASSPORT]`
 [ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
 [ ] Copilot не говорит, что Draft Project Passport готов для загрузки в Sources
 [ ] Copilot не выгружает полный review-report по умолчанию
 [ ] Copilot помог выполнить Passport Hardening как controlled interview
+[ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно и идёт после `[PASSPORT CHALLENGE REVIEW]`
 [ ] Hardening идёт один вопрос за шаг
+[ ] Hardening-шаг содержит ровно один user-facing вопрос
 [ ] Каждый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант, если контекста достаточно
 [ ] Каждый hardening-вопрос объясняет, какое поле паспорта изменится
 [ ] Copilot останавливается на первом hardening-вопросе и ждёт ответа пользователя
@@ -55,6 +59,7 @@
 [ ] Copilot прямо говорит, что обязательно добавить в Sources сейчас
 [ ] Copilot прямо говорит, что не стоит добавлять в Sources
 [ ] Copilot прямо говорит, что можно добавить позже
+[ ] В onboarding-ответе используются дословные Sources Check headings: `Что уже подключено в Sources`, `Что обязательно добавить в Sources сейчас`, `Что не стоит добавлять в Sources`, `Что можно добавить позже`
 [ ] Copilot не просит Google Drive, папки или весь репозиторий, если нужен только рабочий markdown-пакет
 [ ] Copilot при проверке состава рабочего пакета опирается на [START HERE], а не на собственный список
 [ ] Copilot не просит добавлять шумные raw-export материалы без явной пользы
@@ -156,6 +161,7 @@
 [ ] Copilot сам запускает Passport Challenge Review после draft passport
 [ ] Copilot не перекладывает первый Passport Challenge Review на пользователя
 [ ] Copilot не выгружает полный review-report по умолчанию, если достаточно compact review
+[ ] Draft / Review / Hardening выводятся с дословными stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
