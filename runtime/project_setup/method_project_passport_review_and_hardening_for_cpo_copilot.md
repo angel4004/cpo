@@ -1,6 +1,6 @@
 # Project Passport Review and Hardening for CPO Copilot
 Статус: METHOD
-Обновлено: 2026-04-24
+Обновлено: 2026-04-26
 
 Назначение
 Этот файл задаёт процесс доведения [PROJECT PASSPORT] Паспорта проекта от рабочего черновика до стабильного publish-артефакта.
@@ -47,11 +47,11 @@ Need → Product Capability → Customer Action → Customer Outcome
 → Что клиент получает в измеримом результате
 ```
 
-Минимальные вопросы:
-1. Что нужно клиенту?
-2. Что даёт продукт?
-3. Что клиент с этим делает?
-4. Что клиент получает в измеримом результате?
+Минимальные labels для bundled intake-вопроса:
+1. Что нужно клиенту
+2. Что даёт продукт
+3. Что клиент с этим делает
+4. Что клиент получает в измеримом результате
 
 Правила:
 - если пользователь дал ответы, перенеси их в Draft Project Passport как рабочие формулировки;
@@ -64,7 +64,7 @@ Need → Product Capability → Customer Action → Customer Outcome
 
 Copilot должен прямо сказать пользователю:
 - это draft, а не стабильный источник правды;
-- сейчас copilot сам проведёт Passport Challenge Review;
+- после draft в этом же ответе copilot сам фактически выводит Passport Challenge Review;
 - перед публикацией в Sources нужен Passport Challenge Review и Passport Hardening;
 - Sources не являются местом для промежуточных гипотез и рабочих черновиков.
 
@@ -81,18 +81,42 @@ Draft Project Passport должен:
 - называть draft финальным [PROJECT PASSPORT];
 - завершать ответ без Passport Challenge Review;
 - переносить ответственность за первый review на пользователя;
+- завершать post-draft ответ обещанием "сейчас проведу review / задам hardening-вопрос" без фактических блоков review и hardening в этом же assistant-turn;
 - сразу выдавать `[FINAL PROJECT PASSPORT SNAPSHOT]`, если пользователь ещё не ответил на hardening-вопросы;
 - самостоятельно выбирать hardening decisions за пользователя, кроме безопасных маркировок unknown / assumption / forbidden claim.
 
 Stage-маркеры ниже являются output contract для onboarding-протокола.
-Пиши их дословно отдельными строками или markdown-заголовками.
-Не заменяй их синонимами и не объединяй несколько стадий под одним общим заголовком.
+Пиши их дословно отдельными standalone-строками.
+Не заменяй их синонимами, не добавляй пробелы внутри квадратных скобок, не добавляй suffix / prefix на той же строке и не объединяй несколько стадий под одним общим заголовком.
 
-Обязательный первый post-draft output:
+Valid marker lines:
+
+```markdown
+[DRAFT PROJECT PASSPORT]
+[PASSPORT CHALLENGE REVIEW]
+[PASSPORT HARDENING INTERVIEW]
+[FINAL PROJECT PASSPORT SNAPSHOT]
+```
+
+Invalid marker lines:
+
+```markdown
+[ PASSPORT CHALLENGE REVIEW ]
+[PASSPORT CHALLENGE REVIEW — compact]
+## [PASSPORT HARDENING INTERVIEW — Question 1]
+```
+
+Обязательный первый post-draft assistant-turn:
 1. `[DRAFT PROJECT PASSPORT]`
-2. короткая фраза: `Это рабочий черновик, не publish artifact. Я сразу провожу Passport Challenge Review.`
-3. `[PASSPORT CHALLENGE REVIEW]` в compact form
-4. `[PASSPORT HARDENING INTERVIEW]`, если найдены critical или major weak points
+2. compact Draft Project Passport как рабочий черновик, без длинных next steps и без финальной публикации;
+3. короткая фраза: `Это рабочий черновик, не publish artifact. Я сразу провожу Passport Challenge Review.`;
+4. `[PASSPORT CHALLENGE REVIEW]`;
+5. compact review: verdict, 3-5 critical / major weak points, hardening queue;
+6. `[PASSPORT HARDENING INTERVIEW]`, если найдены critical или major weak points;
+7. первый hardening-вопрос в обязательном формате ниже.
+
+Если не хватает output budget, сокращай draft, а не review и hardening.
+Post-draft assistant-turn считается незавершённым, если после `[DRAFT PROJECT PASSPORT]` есть только обещание review/hardening, но нет фактических блоков `[PASSPORT CHALLENGE REVIEW]` и `[PASSPORT HARDENING INTERVIEW]`.
 
 Первый post-draft output должен остановиться на первом hardening-вопросе.
 Не добавляй в этот же ответ:
@@ -104,7 +128,7 @@ Stage-маркеры ниже являются output contract для onboarding
 `[FINAL PROJECT PASSPORT SNAPSHOT]` можно готовить только в отдельном следующем шаге, когда пользователь ответил на critical / major hardening questions или явно попросил завершить snapshot с оставшимися `unknown`.
 
 Если draft получился длинным, всё равно не говори, что он готов к Sources.
-В этом случае сделай compact Passport Challenge Review по critical и major weak points и сразу задай первый hardening-вопрос.
+В этом случае укороти draft, сделай compact Passport Challenge Review по critical и major weak points и сразу задай первый hardening-вопрос.
 Если critical / major weak points не найдены, не выдумывай hardening-вопросы: явно скажи, что publish blockers не найдены, и переходи к следующему безопасному шагу по протоколу.
 
 ## Passport Challenge Review
@@ -404,8 +428,16 @@ passport weak point / onboarding gap / missing project evidence / PAF consistenc
 Hardening interview — это quiz-like flow, а не список готовых решений.
 Copilot не должен сам проходить quiz за пользователя.
 
+Если после Customer Value Chain Intake остаются critical / major missing inputs, не откладывай draft ради нового intake-опроса.
+Подготовь Draft Project Passport с `unknown` / `missing input`, затем проведи Passport Challenge Review и оформи первый missing-input вопрос как Passport Hardening Interview.
+Обычный список "какой missing input вы можете дать" без stage-маркера, поля паспорта и ожидаемого изменения не считается hardening.
+Если пользователь вернул Customer Value Chain labels пустыми, считай это `unknown` / `missing input`.
+Не задавай confirmation gate "продолжать ли с unknown"; сразу переходи к draft, review и первому hardening-вопросу.
+
 Базовый UX hardening:
 - задавай один вопрос за шаг;
+- используй не более одного вопросительного знака во всём assistant-turn;
+- не проговаривай это машинное правило пользователю;
 - каждый вопрос должен улучшать конкретное поле паспорта;
 - для каждого вопроса дай 2-3 взаимоисключающих варианта ответа;
 - один вариант пометь как `Рекомендованный`, если контекста достаточно;
@@ -419,7 +451,7 @@ Copilot не должен сам проходить quiz за пользоват
 Формат hardening-вопроса:
 
 ```markdown
-## [PASSPORT HARDENING INTERVIEW]
+[PASSPORT HARDENING INTERVIEW]
 
 ### Question N/M: <короткое название>
 
@@ -434,6 +466,9 @@ passport weak point / onboarding gap / missing project evidence / PAF consistenc
 
 **Что изменится в паспорте:**
 <конкретное поле, формулировка или блок, который будет обновлён>
+
+**Один вопрос:**
+<один user-facing вопрос без дополнительных вопросов в пояснениях>
 
 **Варианты ответа:**
 A. <вариант A>
@@ -451,6 +486,7 @@ C. <вариант C>
 
 В одном hardening-шаге должен быть ровно один user-facing вопрос.
 Не добавляй второй вопрос после вариантов A/B/C.
+В вариантах A/B/C, hardening queue, шаблонах, checklist и формах не используй дополнительные вопросительные знаки; пиши поля как labels без вопросительного знака.
 Если нужно уточнить несколько полей, создай отдельные hardening questions и задавай их последовательно.
 
 Если пользователь выбрал вариант:
@@ -493,12 +529,19 @@ Retrospective Passport Review
 ```text
 Этот паспорт был создан по старому onboarding.
 В старом onboarding не было явного блока Customer Value Chain.
-Поэтому отсутствие customer action или customer outcome — это не ошибка автора паспорта,
-а gap старого процесса. Рекомендация: добавить этот блок в следующий onboarding и докрутить текущий паспорт.
+Поэтому отсутствие customer action или customer outcome — это gap старого процесса,
+а не персональный дефект автора паспорта. Рекомендация: добавить этот блок в следующий onboarding и докрутить текущий паспорт.
 ```
 
 В этом режиме новые критерии применяются как диагностика пробелов старого процесса и паспорта, а не как оценка качества пользователя.
 Отсутствие новых полей классифицируй как `onboarding gap`, `missing input` и `needs follow-up`.
+Если пользователь прямо сообщает, что старый паспорт создан до нового onboarding и в нём нет Customer Value Chain, сначала выведи явную строку:
+
+```text
+Классификация: onboarding gap / missing input / needs follow-up.
+```
+
+Только после этой классификации переходи к review или одному следующему вопросу.
 
 ## Non-goals
 Не делай в рамках review:

@@ -25,7 +25,9 @@ Copilot умеет работать в двух режимах:
 7. Скопируй весь текст из этого файла в первый чат проекта.
 8. Пройди онбординг.
 9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening Interview и Final Passport Snapshot.
-   После черновика copilot должен сам сделать compact review и вести hardening пошагово: один вопрос за шаг, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант и явное описание, какое поле паспорта изменится.
+   После черновика copilot должен в том же assistant-turn сам вывести `[PASSPORT CHALLENGE REVIEW]` и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]`.
+   Stage-маркеры должны быть standalone-строками без пробелов внутри квадратных скобок и без suffix на той же строке.
+   Hardening идёт пошагово: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
    Copilot не должен сразу выдавать Final Passport Snapshot: сначала нужно ответить на hardening-вопросы.
 10. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
 11. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.

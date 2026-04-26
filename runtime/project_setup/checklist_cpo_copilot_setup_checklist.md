@@ -27,19 +27,19 @@
 ## 3B. Подготовлен Project passport
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
-[ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно
+[ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
 [ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
-[ ] Copilot сам запустил Passport Challenge Review после draft passport
-[ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно и идёт после `[DRAFT PROJECT PASSPORT]`
+[ ] Copilot сам запустил Passport Challenge Review после draft passport в том же assistant-turn, а не только пообещал сделать review позже
+[ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[DRAFT PROJECT PASSPORT]`
 [ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
 [ ] Copilot не говорит, что Draft Project Passport готов для загрузки в Sources
 [ ] Copilot не выгружает полный review-report по умолчанию
-[ ] Copilot помог выполнить Passport Hardening как controlled interview
-[ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно и идёт после `[PASSPORT CHALLENGE REVIEW]`
+[ ] Copilot помог выполнить Passport Hardening как controlled interview в том же post-draft assistant-turn, если review нашёл critical / major weak points
+[ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[PASSPORT CHALLENGE REVIEW]`
 [ ] Hardening идёт один вопрос за шаг
-[ ] Hardening-шаг содержит ровно один user-facing вопрос
+[ ] Hardening-шаг содержит ровно один user-facing вопрос и не более одного вопросительного знака во всём assistant-turn
 [ ] Каждый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант, если контекста достаточно
-[ ] Каждый hardening-вопрос объясняет, какое поле паспорта изменится
+[ ] Каждый hardening-вопрос содержит `Поле паспорта:` и `Что изменится в паспорте:`
 [ ] Copilot останавливается на первом hardening-вопросе и ждёт ответа пользователя
 [ ] Copilot не выбирает hardening decisions за пользователя
 [ ] Если draft уже добавлен в Sources, первый hardening-вопрос исправляет source hygiene
@@ -161,12 +161,16 @@
 [ ] Copilot сам запускает Passport Challenge Review после draft passport
 [ ] Copilot не перекладывает первый Passport Challenge Review на пользователя
 [ ] Copilot не выгружает полный review-report по умолчанию, если достаточно compact review
-[ ] Draft / Review / Hardening выводятся с дословными stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
+[ ] Draft / Review / Hardening выводятся с дословными standalone stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
+[ ] Stage-маркеры не содержат пробелов внутри квадратных скобок и suffix вроде `compact`, `Question 1/3`, тире или двоеточия на той же строке
+[ ] Post-draft assistant-turn не завершается обещанием review/hardening без фактических блоков `[PASSPORT CHALLENGE REVIEW]` и `[PASSPORT HARDENING INTERVIEW]`
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
 [ ] Hardening-вопросы предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C
 [ ] Hardening-вопросы рекомендуют один вариант, если контекста достаточно
+[ ] Hardening-вопросы по missing inputs оформлены как `[PASSPORT HARDENING INTERVIEW]`, а не как обычный intake-вопрос
+[ ] Варианты A/B/C, hardening queue, шаблоны, checklist и формы внутри assistant-turn не добавляют дополнительные вопросительные знаки
 [ ] Copilot не выбирает hardening decisions за пользователя
 [ ] Final Passport Snapshot не появляется в первом post-draft ответе до ответов пользователя
 [ ] Review маркирует факты, выводы, допущения, неопределённости и forbidden claims
@@ -311,7 +315,7 @@
 [ ] Запускает Retrospective Passport Review
 [ ] Объясняет, что старый onboarding не собирал Customer Value Chain
 [ ] Классифицирует отсутствие customer action или customer outcome как onboarding gap / missing input / needs follow-up
-[ ] Не называет это ошибкой автора паспорта
+[ ] Не называет это персональным дефектом автора паспорта
 
 ## 9. Дисциплина обновления
 [ ] Понятно, кто обновляет контекст

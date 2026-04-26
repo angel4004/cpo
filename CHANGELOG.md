@@ -9,6 +9,11 @@
 - Усилен post-draft contract: copilot сам запускает Passport Challenge Review и не предлагает загрузить draft passport в Sources.
 - Passport Hardening переведён в controlled interview: compact review, затем последовательные вопросы с 2-3 вариантами ответа в формате A/B/C, рекомендацией и явным описанием будущего изменения паспорта.
 - Добавлен interactive gate: copilot не выдаёт Final Passport Snapshot в первом post-draft ответе и не выбирает hardening decisions за пользователя.
+- Уточнён machine-readable contract stage-маркеров: standalone-строки без пробелов внутри `[]` и без suffix на той же строке.
+- Закреплено, что post-draft ответ должен фактически содержать `[PASSPORT CHALLENGE REVIEW]` и `[PASSPORT HARDENING INTERVIEW]`, а не обещание выполнить их позже.
+- Missing-input вопросы после Customer Value Chain Intake должны оформляться как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`.
+- Правило одного вопроса усилено до машинной эвристики: не более одного вопросительного знака в assistant-turn; поля шаблонов и checklist должны быть labels без вопросительного знака.
+- Для старых паспортов без Customer Value Chain закреплена явная классификация `onboarding gap / missing input / needs follow-up`; пустые Customer Value Chain labels трактуются как `unknown`.
 
 ## v0.2.0
 - Закреплены обязательные PAF-проверки перед сильными продуктовыми решениями.
