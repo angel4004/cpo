@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
-- Пока нет изменений.
+- Согласованы блоки `Что это` и `Для чего он нужен` в корневом README: убрано дублирование, техническое описание отделено от ценности.
 
 ## v0.3.0
 - Evidence gaps после Customer Value Chain Intake теперь должны идти в Draft Project Passport → Passport Challenge Review → Passport Hardening Interview, а не в дополнительный intake по метрикам.
