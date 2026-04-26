@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
+- Пока нет изменений.
+
+## v0.3.0
 - Evidence gaps после Customer Value Chain Intake теперь должны идти в Draft Project Passport → Passport Challenge Review → Passport Hardening Interview, а не в дополнительный intake по метрикам.
 - Ready-to-send письма, task, request, checklist, interview scripts, survey guides и question banks больше не должны содержать серию вопросов с `?`; подтверждаемые пункты оформляются как labels/prompts.
 - Добавлен Customer Value Chain Intake перед Draft Project Passport.
@@ -16,6 +19,8 @@
 - Missing-input вопросы после Customer Value Chain Intake должны оформляться как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`.
 - Правило одного вопроса усилено до машинной эвристики: не более одного вопросительного знака в assistant-turn; поля шаблонов и checklist должны быть labels без вопросительного знака.
 - Для старых паспортов без Customer Value Chain закреплена явная классификация `onboarding gap / missing input / needs follow-up`; пустые Customer Value Chain labels трактуются как `unknown`.
+- В корневой README добавлено более живое описание ценности CPO Copilot.
+- В AGENTS.md закреплено, что релизные изменения должны обновлять `CHANGELOG.md` и `releases/vX.Y.Z/README.md`.
 
 ## v0.2.0
 - Закреплены обязательные PAF-проверки перед сильными продуктовыми решениями.
