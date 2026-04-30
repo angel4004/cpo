@@ -1,5 +1,26 @@
 # AGENTS.md
 
+## CPO Quality Ecosystem
+
+Этот репозиторий является частью `cpo-quality-ecosystem`: набора связанных,
+но независимых проектов вокруг качества CPO Copilot.
+
+Соседние проекты:
+
+- `cpo` — текущий репозиторий, source under test и рабочий markdown-пакет CPO Copilot.
+- `../Salamander` — methodology audit / observability layer: сравнивает PAF reference layer и CPO Copilot working package.
+- `../cpo-protocol-lab` — protocol harness: проверяет observable behavior через scenarios, fixtures, transcript, replay, deterministic evaluator и reports.
+
+Границы ответственности:
+
+- В этом repo меняй только рабочий пакет CPO Copilot: `runtime/core`, `runtime/project_setup`, `releases/`, `README.md`, `CHANGELOG.md` и repo-level инструкции.
+- В `../Salamander` уходят задачи про методологический аудит PAF reference layer → CPO working package.
+- В `../cpo-protocol-lab` уходят задачи про pass/fail onboarding-протокола, scenarios, fixtures, transcript, replay, deterministic evaluator и reports.
+- Интеграция между проектами должна идти через artifacts и будущий quality-gate слой, а не через импорт кода соседних проектов.
+- Не смешивай env, reports, deploy, runtime-файлы и проверки соседних проектов без явного запроса Ильи.
+
+Важно: этот `AGENTS.md` — repo-level инструкция для агентов и разработки. Он не входит в CPO Copilot runtime package и не должен добавляться в GPT Project / Claude Project `Sources`.
+
 ## Назначение репозитория
 - Это репозиторий CPO copilot.
 - Это не обычное приложение и не локальный сервис.
