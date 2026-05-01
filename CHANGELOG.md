@@ -4,6 +4,13 @@
 - В корневом README блок `Для чего он нужен` перенесён выше блока `Что это`, чтобы сначала показать ценность, а затем формат подключения.
 - Перестроено описание ценности CPO Copilot: блок объясняет связь идей, фич и решений с целями продукта и бизнеса, контекст перед решением и риск фич без понятного основания.
 
+## v0.4.0
+- PAF-режим усилен как routing / next-step engine, а не только как слой осторожности.
+- Для вопросов о следующем артефакте добавлен обязательный compact routing block: `decision type → PAF context / activity → required artifacts → missing inputs / artifacts → forbidden claim labels → next best artifact / next check`.
+- Усилена работа с contradiction / gap context: CPO должен явно поднимать конфликт, evidence gap, forbidden claim labels и next check, не сглаживая unsupported PMF/Growth claims.
+- PMF evidence block стал более человеко- и машино-читаемым: русские labels сохраняют canonical terms в скобках, включая `Segment`, `Need`, `Alternative`, `PMF metric`, `baseline / benchmark / norm`.
+- Поведение проверено full API baseline matrix: GPT-5.5 + Sonnet 4.6, 2 прогона на модель, 5 PAF-сценариев, итог `20/20 pass`.
+
 ## v0.3.0
 - Evidence gaps после Customer Value Chain Intake теперь должны идти в Draft Project Passport → Passport Challenge Review → Passport Hardening Interview, а не в дополнительный intake по метрикам.
 - Ready-to-send письма, task, request, checklist, interview scripts, survey guides и question banks больше не должны содержать серию вопросов с `?`; подтверждаемые пункты оформляются как labels/prompts.
