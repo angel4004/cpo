@@ -17,6 +17,9 @@
   `decision type → PAF context / activity → required artifacts → missing inputs / artifacts → forbidden claim labels → next best artifact / next check`.
 - Contradiction / gap context стал first-class behavior: сначала конфликт и gaps, потом безопасный следующий шаг.
 - PMF evidence block стал понятнее для русскоязычного пользователя: русский смысл сохраняется рядом с canonical terms.
+- Первый onboarding-ответ стал спокойнее: clean setup не выглядит как список проблем, а полные/пустые состояния пишутся без двойных отрицаний.
+- Первый onboarding-вопрос теперь разводит две ветки: есть ли уже паспорт проекта из другого Copilot; без паспорта идёт сбор контекста вопросами, с паспортом — review / hardening существующего паспорта.
+- Project Context Intake теперь не должен превращать один шаг в серию вопросов; старый паспорт без новых полей объясняется как `это не ошибка автора`.
 - Passport flow остаётся сильным operational layer, но не подменяет весь PAF.
 
 ## Проверено

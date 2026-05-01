@@ -8,6 +8,11 @@
 [ ] Downstream CPO copilot project уже создан по корневому README
 [ ] Понятно, что это рабочий продуктовый проект, а не внутренняя мастерская PAF
 [ ] Определён человек, который принимает финальное решение
+[ ] Понятно, есть ли уже паспорт проекта из другого Copilot
+[ ] Если паспорта нет, copilot запускает последовательный Project Context Intake
+[ ] Если паспорт уже есть, copilot запускает review паспорта на ошибки, плохие формулировки, gaps и уточнение контекста
+[ ] В Project Context Intake один шаг содержит одну question-line с одним `?`, а дополнительные поля оформлены как labels без вопросительных знаков
+[ ] Copilot не пытается собрать весь минимальный context set одним большим intake-блоком; исключение — Customer Value Chain Intake четырьмя labels
 [ ] Понятно, в какой из двух ситуаций запускаем copilot:
 [ ] Product mode — продукт или объект работы уже есть
 [ ] Exploration mode — продукта пока нет и нужно выбрать направление
@@ -25,6 +30,8 @@
 [ ] Понятно, что copilot не должен решать без отдельного подтверждения
 
 ## 3B. Подготовлен Project passport
+[ ] До draft passport пройдена развилка passport exists / no passport
+[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент/роли, Customer Value Chain, статус, evidence/data sources или unknown, ограничения/decision rights или unknown
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
@@ -62,16 +69,24 @@
 [ ] В onboarding-ответе используются дословные Sources Check headings: `Что уже подключено в Sources`, `Что обязательно добавить в Sources сейчас`, `Что не стоит добавлять в Sources`, `Что можно добавить позже`
 [ ] Copilot не просит Google Drive, папки или весь репозиторий, если нужен только рабочий markdown-пакет
 [ ] Copilot при проверке состава рабочего пакета опирается на [START HERE], а не на собственный список
+[ ] Если рабочий markdown-пакет подключён полностью, copilot пишет позитивный статус без двойных отрицаний: `Рабочий markdown-пакет подключён полностью.`
+[ ] Первый onboarding-ответ различает clean setup и setup with project artifacts, не превращая clean setup в тяжёлый audit report
+[ ] Если passport status unclear, первый user-facing вопрос — о наличии паспорта проекта из другого Copilot, а не о режиме и не Customer Value Chain Intake
+[ ] Если рабочий пакет подключён полностью, первый ответ не перечисляет все 14 файлов, а показывает grouped summary `Core: 4/4, Project setup: 10/10`
+[ ] В exploration mode без продукта copilot не предлагает варианты, завязанные на существующий продукт, платформу, трафик или аналитику
 [ ] Copilot не просит добавлять шумные raw-export материалы без явной пользы
 [ ] Copilot объясняет простыми словами, что такое Sources
 [ ] Copilot не ждёт, что пользователь сам догадается, что именно туда добавлять
 [ ] Copilot спокойно принимает ответ `unknown` или `не знаю`, если пользователь чего-то не знает
 
 ## 4B. Evidence gaps and one-question UX
-[ ] Если после Customer Value Chain Intake не хватает evidence по PMF, PCF, customer success, business impact, baseline или target metric, copilot не продолжает обычный intake новыми уточнениями
-[ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim
-[ ] Первый вопрос по evidence gap оформлен как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`
-[ ] Если пользователь говорит, что паспорт уже есть в Sources, но имя/содержимое не видно явно, copilot начинает hardening по Source hygiene / Passport visibility, а не ordinary intake про путь
+[ ] В no passport flow после Customer Value Chain Intake copilot не выдаёт сразу большой Draft Project Passport, а продолжает Project Context Intake одним вопросом за шаг
+[ ] В no passport flow evidence gap до draft фиксируется как missing context / unknown, а не как publish-blocking review претензия к пользователю
+[ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim только после draft или в existing passport flow
+[ ] Первый post-draft вопрос по evidence gap оформлен как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`
+[ ] Если пользователь говорит, что паспорт уже есть в Sources, но имя/содержимое не видно явно, copilot задаёт один вопрос о названии файла или тексте паспорта, а не ревьюит по памяти
+[ ] Пока текст паспорта не виден, copilot не обещает будущие review / hardening stage names как план
+[ ] Для старого паспорта без новых полей copilot использует безопасную формулировку `это не ошибка автора`
 [ ] Ready-to-send письма, task, request и checklist не содержат разделов с несколькими вопросами через `?`
 [ ] Внутренние пункты таких артефактов оформлены как labels / пункты для подтверждения без вопросительных знаков
 [ ] Interview scripts, survey guides и question banks в onboarding/hardening оформлены как prompts / labels без `?`

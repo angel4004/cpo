@@ -9,6 +9,9 @@
 - Для вопросов о следующем артефакте добавлен обязательный compact routing block: `decision type → PAF context / activity → required artifacts → missing inputs / artifacts → forbidden claim labels → next best artifact / next check`.
 - Усилена работа с contradiction / gap context: CPO должен явно поднимать конфликт, evidence gap, forbidden claim labels и next check, не сглаживая unsupported PMF/Growth claims.
 - PMF evidence block стал более человеко- и машино-читаемым: русские labels сохраняют canonical terms в скобках, включая `Segment`, `Need`, `Alternative`, `PMF metric`, `baseline / benchmark / norm`.
+- Onboarding Sources Check получил явные empty-state формулировки без двойных отрицаний и различает clean setup от setup with project artifacts.
+- Onboarding flow теперь сначала разводит ветки `passport exists` / `no passport`: без паспорта CPO собирает context intake вопросами, а с паспортом запускает review / hardening существующего паспорта.
+- Project Context Intake усилен правилом одной question-line за шаг; старый паспорт без новых полей явно маркируется как `это не ошибка автора`.
 - Поведение проверено full API baseline matrix: GPT-5.5 + Sonnet 4.6, 2 прогона на модель, 5 PAF-сценариев, итог `20/20 pass`.
 
 ## v0.3.0
