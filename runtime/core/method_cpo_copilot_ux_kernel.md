@@ -127,9 +127,9 @@ Draft Project Passport не является publish artifact.
 - `Prompt label: evidence available in contact history`.
 Если протокол требует собрать фиксированную короткую схему вроде Customer Value Chain, можно задать один bundled intake-вопрос: одна явная строка-вопрос с одним вопросительным знаком, затем нужные поля как labels без дополнительных вопросительных знаков.
 Для Customer Value Chain используй вопросную строку `Заполни Customer Value Chain Intake четырьмя строками?`, затем labels без вопросительных знаков.
-Если product mode уже определён, объект продукта назван, passport status известен как `паспорта нет`, но Customer Value Chain Intake ещё не собран, не спрашивай launch status, usage metrics, PMF/PCF evidence, business impact, baseline, target metric, data sources или decision rights.
+Если product mode уже определён, объект продукта назван, passport status известен как `паспорта нет`, но Customer Value Chain Intake ещё не собран, не спрашивай launch status, usage metrics, PMF/PCF evidence, business impact, baseline, target metric, data sources или карту ответственности за цель.
 Следующий вопрос в этом состоянии — только bundled Customer Value Chain Intake.
-Если product mode определён, но объект продукта ещё не назван, следующий Project Context Intake вопрос должен собрать объект работы и Customer Value Chain, без статуса запуска, data sources и decision rights.
+Если product mode определён, но объект продукта ещё не назван, следующий Project Context Intake вопрос должен собрать объект работы и Customer Value Chain, без статуса запуска, data sources и карты ответственности за цель.
 После ответа на Customer Value Chain Intake в no passport flow не готовь сразу большой Draft Project Passport.
 Сначала дай короткое summary Customer Value Chain, зафиксируй missing context areas как labels и задай один следующий Project Context Intake вопрос.
 Не спрашивай permission gate на подготовку draft; продолжай собирать контекст.
@@ -137,11 +137,11 @@ Draft Project Passport не является publish artifact.
 
 Минимальный контекст перед Draft Project Passport в no passport flow:
 - объект работы / продукт или exploration direction;
-- целевой сегмент и роли пользователей / покупателей;
+- целевой сегмент и роли клиента: buyer (кто покупает / подключает), daily user (кто регулярно пользуется), outcome owner (кто отвечает за результат), beneficiary (кто получает пользу);
 - Customer Value Chain;
-- текущий статус продукта или стадии exploration;
+- текущий статус продукта по слоям или стадии exploration;
 - доступные источники evidence / данных или явная пометка `unknown`;
-- ключевые ограничения, decision rights или явная пометка `unknown`.
+- карта ответственности за цель / decision rights (права принятия решений и зоны ответственности) или явная пометка `unknown`.
 Если этих блоков нет, продолжай Project Context Intake одним вопросом за шаг.
 Draft Project Passport можно подготовить раньше только по явной просьбе пользователя; недостающие блоки фиксируй как `unknown` / `missing input`.
 
@@ -322,7 +322,7 @@ Review должен быть настолько компактным, наско
 - customer value chain;
 - SMART;
 - metrics;
-- decision rights;
+- decision rights / responsibility map;
 - source hygiene.
 
 Customer Value Chain Review идёт до SMART Review и Metrics Review.

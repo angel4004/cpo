@@ -12,7 +12,8 @@
 - Onboarding Sources Check получил явные empty-state формулировки без двойных отрицаний и различает clean setup от setup with project artifacts.
 - Onboarding flow теперь сначала разводит ветки `passport exists` / `no passport`: без паспорта CPO собирает context intake вопросами, а с паспортом запускает review / hardening существующего паспорта.
 - Project Context Intake усилен правилом одной question-line за шаг; старый паспорт без новых полей явно маркируется как `это не ошибка автора`.
-- Поведение проверено full API baseline matrix: GPT-5.5 + Sonnet 4.6, 2 прогона на модель, 5 PAF-сценариев, итог `20/20 pass`.
+- Неоднозначные onboarding-поля заменены на явные контексты: карта ответственности за цель, роли клиента, статус запуска по слоям, контекст оптимизации, классы метрик и источники правды по типам.
+- PAF-routing поведение до последней wording-правки проверено full API baseline matrix: GPT-5.5 + Sonnet 4.6, 2 прогона на модель, 5 PAF-сценариев, итог `20/20 pass`.
 
 ## v0.3.0
 - Evidence gaps после Customer Value Chain Intake теперь должны идти в Draft Project Passport → Passport Challenge Review → Passport Hardening Interview, а не в дополнительный intake по метрикам.

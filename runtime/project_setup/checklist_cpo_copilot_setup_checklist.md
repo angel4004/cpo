@@ -31,7 +31,7 @@
 
 ## 3B. Подготовлен Project passport
 [ ] До draft passport пройдена развилка passport exists / no passport
-[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент/роли, Customer Value Chain, статус, evidence/data sources или unknown, ограничения/decision rights или unknown
+[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и роли клиента, Customer Value Chain, статус по слоям, evidence/data sources или unknown, карта ответственности за цель / decision rights или unknown
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
@@ -96,16 +96,16 @@
 [ ] Заполнено название проекта
 [ ] Заполнено, что это за продукт в одной фразе
 [ ] Заполнено, чем здесь управляем
-[ ] Заполнено, что входит и не входит в контур проекта
-[ ] Заполнено, кто принимает финальное решение
+[ ] Заполнены контуры продукта, процесса клиента, текущего решения и out-of-scope
+[ ] Заполнена карта ответственности за цель: отвечает за измеримый результат / outcome, продуктовые решения, данные/измерение, внедрение, покупку/подключение и использование после покупки
 [ ] Заполнен текущий этап PLC
 [ ] Если релевантно, заполнен текущий этап внутри Product Discovery
-[ ] Заполнен статус запуска
+[ ] Заполнен статус запуска по слоям: доступность продукта (product availability), внедрение у клиентов (customer rollout), коммерческий статус (commercial status), готовность данных и интеграций (data / integration readiness)
 [ ] Заполнены цели на длинный горизонт
 [ ] Заполнены цели на ближайший горизонт
 [ ] Заполнен Next decision area сейчас
 [ ] Заполнен горизонт решения
-[ ] Заполнено, что сейчас оптимизируем
+[ ] Заполнен контекст оптимизации: какой измеримый результат / outcome улучшаем, для кого, какой метрикой, на каком горизонте и что не оптимизируем
 [ ] Заполнены ключевые сегменты
 [ ] Заполнена основная ценность продукта
 [ ] Заполнено, что нужно клиенту
@@ -116,7 +116,7 @@
 [ ] Заполнена текущая бизнес-модель
 [ ] Заполнено, что уже понятно по выводу на рынок, если это релевантно
 [ ] Заполнены допущения по экономике, если это релевантно
-[ ] Заполнены ключевые метрики
+[ ] Метрики разделены на метрику ценности (value), бизнес-метрику (business), метрику использования (usage), метрику доказательности (proof / evidence) и ограничительную метрику (guardrail)
 [ ] Заполнены подтверждённые данные
 [ ] Разведены подтверждённое и предположения
 [ ] Если есть PMF-claim, заполнены PMF metric, baseline / norm / benchmark и assumptions about norm
@@ -131,7 +131,7 @@
 [ ] Заполнены главные риски
 [ ] Заполнено, что пока неизвестно
 [ ] Заполнены зоны, которые нельзя решать без отдельного подтверждения
-[ ] Указаны главный и дополнительные источники правды
+[ ] Указаны источники правды по продуктовым фактам, данным/метрикам, методологии и текущему решению
 [ ] Указаны дата обновления, владелец обновления и триггеры обновления
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с product context
 [ ] [PROJECT PASSPORT] содержит Customer Value Chain
@@ -189,7 +189,7 @@
 [ ] Draft / Review / Hardening выводятся с дословными standalone stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
 [ ] Stage-маркеры не содержат пробелов внутри квадратных скобок и suffix вроде `compact`, `Question 1/3`, тире или двоеточия на той же строке
 [ ] Post-draft assistant-turn не завершается обещанием review/hardening без фактических блоков `[PASSPORT CHALLENGE REVIEW]` и `[PASSPORT HARDENING INTERVIEW]`
-[ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights и Source Hygiene
+[ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights / Responsibility Map и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
 [ ] Hardening-вопросы предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C

@@ -60,7 +60,7 @@
 - customer success без проверки;
 - PMF/PCF без доказательств;
 - метрики без baseline;
-- решения без decision rights.
+- решения без карты ответственности за цель / decision rights.
 
 Если review находит поле или критерий, который onboarding не дал пользователю возможности заполнить, это не ошибка пользователя.
 Классифицируй это как onboarding gap, missing input и needs follow-up.
