@@ -41,12 +41,13 @@ CPO Copilot — это набор markdown-инструкций для GPT Proje
 7. Скопируй весь текст из этого файла в первый чат проекта.
 8. Пройди онбординг.
 9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening Interview и Final Passport Snapshot.
-   После черновика copilot должен в том же assistant-turn сам вывести `[PASSPORT CHALLENGE REVIEW]` и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]`.
+   После черновика copilot должен остановиться и спросить готовность к Passport Challenge Review.
+   Passport Challenge Review и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]` идут отдельным assistant-turn после согласия.
    Stage-маркеры должны быть standalone-строками без пробелов внутри квадратных скобок и без suffix на той же строке.
    Hardening идёт пошагово: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
    Copilot не должен сразу выдавать Final Passport Snapshot: сначала нужно ответить на hardening-вопросы.
-10. Вставь полученный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
-11. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
+10. Сохрани финальный `[PROJECT PASSPORT]` отдельным `.md`-файлом и добавь его в `Sources`.
+11. Вставь отдельный `[PROJECT INSTRUCTIONS]` в поле `Project instructions`.
 
 ## Что должно остаться после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
@@ -85,4 +86,4 @@ Git — источник истины для рабочего пакета. В `
 - устаревшие документы без пометки, что они устарели;
 - большие наборы файлов, не связанные с текущим продуктом или вопросом.
 
-Draft Project Passport — это `chat-only working artifact`. В `Sources` добавляется только финальный стабильный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening.
+Draft Project Passport — это рабочий черновик только для чата (`chat-only working artifact`). В `Sources` добавляется только финальный стабильный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening.

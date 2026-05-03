@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
+- Onboarding metrics intake теперь использует русские labels с canonical labels в скобках и объясняет, как value / business / usage / evidence / guardrail / baseline fields влияют на рекомендации copilot.
+- Decision rights intake теперь спрашивает только недостающие права принятия решений, если они реально нужны для ближайшего решения; повторный вопрос про финальную карту запрещён без нового риска или конфликта.
+- Draft Project Passport, Passport Challenge Review и Project Instructions разделены на отдельные assistant-turn: после draft copilot спрашивает готовность к review, а Project Instructions больше не дублируют полный паспорт проекта.
 - Onboarding no passport flow теперь явно собирает цели и рамку решения до draft passport, а вопрос про карту ответственности не должен повторять уже собранные роли клиента.
 - Publish-critical поля со статусом `частично собрано` больше не считаются готовыми к Draft Project Passport / Passport Challenge Review; baseline, target metric, metric classes и data/evidence sources должны быть собраны или явно помечены пользователем как `unknown`.
 - В корневом README блок `Для чего он нужен` перенесён выше блока `Что это`, чтобы сначала показать ценность, а затем формат подключения.

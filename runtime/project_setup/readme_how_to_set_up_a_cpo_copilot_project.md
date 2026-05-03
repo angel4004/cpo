@@ -11,7 +11,7 @@
 - Создание GPT/Claude Project и настройка памяти описаны в корневом [README.md](../../README.md).
 
 ## Что должно получиться после активации
-После онбординга copilot должен провести draft/review/hardening и выдать 2 результата:
+После онбординга copilot должен провести draft/review/hardening пошагово и выдать 2 результата отдельными шагами:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
 - `[PROJECT PASSPORT]` — финальный стабильный markdown-файл, который нужно сохранить и добавить в `Sources`.
 
@@ -24,13 +24,14 @@ Customer Value Chain Intake
 → Passport Challenge Review
 → Passport Hardening Interview
 → Final Passport Snapshot
+→ Project Instructions
 ```
 
 Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
 Copilot не обновляет Sources автоматически.
-Copilot должен сам провести Passport Challenge Review после draft и не должен просить пользователя ревьюить draft первым.
-После draft copilot должен в том же assistant-turn фактически вывести `[PASSPORT CHALLENGE REVIEW]` и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]`.
-Нельзя завершать post-draft ответ обещанием "сейчас проведу review" без фактического review/hardening-блока.
+После draft copilot останавливается и спрашивает готовность к Passport Challenge Review.
+Passport Challenge Review и Passport Hardening Interview идут отдельным assistant-turn после согласия пользователя.
+Project Instructions готовятся отдельным шагом и не дублируют полный паспорт проекта.
 Stage-маркеры должны быть standalone-строками ровно в таком виде: `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`.
 Пробелы внутри квадратных скобок, suffix вроде `compact` / `Question 1/3` и объединённые заголовки недопустимы.
 После compact review copilot должен вести Passport Hardening как controlled interview: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.

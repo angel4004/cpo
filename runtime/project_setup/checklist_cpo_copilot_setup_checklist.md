@@ -22,14 +22,7 @@
 [ ] [START HERE] Activate CPO Copilot находится и читается в Sources
 [ ] Если файлов не хватает, copilot просит добавить недостающие файлы по списку из [START HERE], а не папку и не альтернативный источник
 
-## 3. Подготовлены и вставлены Project instructions
-[ ] Copilot в конце онбординга подготовил [PROJECT INSTRUCTIONS] Инструкция проекта
-[ ] Copilot прямо объяснил, что этот текст нужно вставить в Project instructions
-[ ] Текст вставлен в Project instructions
-[ ] Понятно, что copilot может делать без отдельного подтверждения
-[ ] Понятно, что copilot не должен решать без отдельного подтверждения
-
-## 3B. Подготовлен Project passport
+## 3. Подготовлен Project passport
 [ ] До draft passport пройдена развилка passport exists / no passport
 [ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и основные роли клиента, Customer Value Chain, статус по слоям, цели и рамка решения, publish-critical metrics / evidence или unknown, минимальная карта ответственности за цель / decision rights или unknown
 [ ] Статус `частично собрано` по publish-critical блоку не считается готовностью к Draft Project Passport и Passport Challenge Review
@@ -38,12 +31,12 @@
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
 [ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
-[ ] Copilot сам запустил Passport Challenge Review после draft passport в том же assistant-turn, а не только пообещал сделать review позже
-[ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[DRAFT PROJECT PASSPORT]`
-[ ] Copilot не просит пользователя самому ревьюить Draft Project Passport до copilot review
+[ ] После draft passport copilot остановился и спросил готовность к Passport Challenge Review
+[ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт отдельным assistant-turn после согласия пользователя
+[ ] Copilot не объединяет Draft Project Passport, Passport Challenge Review и Passport Hardening Interview в один assistant-turn
 [ ] Copilot не связывает Draft Project Passport с публикацией в Sources
 [ ] Copilot не выгружает полный review-report по умолчанию
-[ ] Copilot помог выполнить Passport Hardening как controlled interview в том же post-draft assistant-turn, если review нашёл critical / major weak points
+[ ] Copilot помог выполнить Passport Hardening как controlled interview после Passport Challenge Review, если review нашёл critical / major weak points
 [ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[PASSPORT CHALLENGE REVIEW]`
 [ ] Hardening идёт один вопрос за шаг
 [ ] Hardening-шаг содержит ровно один user-facing вопрос и не более одного вопросительного знака во всём assistant-turn
@@ -55,6 +48,14 @@
 [ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT] только после ответов пользователя на critical / major hardening questions
 [ ] Copilot прямо объяснил, что только финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом
 [ ] Финальный паспорт сохранён и добавлен в Sources вручную
+
+## 3B. Подготовлены и вставлены Project instructions
+[ ] Copilot после final snapshot или явной просьбы подготовил [PROJECT INSTRUCTIONS] Инструкция проекта отдельным assistant-turn
+[ ] Project instructions не дублируют полный паспорт проекта и описывают поведение copilot
+[ ] Copilot прямо объяснил, что этот текст нужно вставить в Project instructions
+[ ] Текст вставлен в Project instructions
+[ ] Понятно, что copilot может делать без отдельного подтверждения
+[ ] Понятно, что copilot не должен решать без отдельного подтверждения
 
 ## 3C. Решение по setup-файлам после активации
 [ ] Понятно, что setup-файлы из `runtime/project_setup` можно убирать из Sources только после успешной активации
@@ -186,12 +187,12 @@
 [ ] Copilot не делает вид, что product context уже есть, если на самом деле идёт exploration mode
 [ ] Copilot не использует source docs как рабочую память проекта
 [ ] Copilot не считает первый Draft Project Passport финальным источником правды
-[ ] Copilot сам запускает Passport Challenge Review после draft passport
-[ ] Copilot не перекладывает первый Passport Challenge Review на пользователя
+[ ] Copilot после draft passport спрашивает готовность к Passport Challenge Review
+[ ] Copilot запускает Passport Challenge Review отдельным assistant-turn после согласия пользователя
 [ ] Copilot не выгружает полный review-report по умолчанию, если достаточно compact review
 [ ] Draft / Review / Hardening выводятся с дословными standalone stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
 [ ] Stage-маркеры не содержат пробелов внутри квадратных скобок и suffix вроде `compact`, `Question 1/3`, тире или двоеточия на той же строке
-[ ] Post-draft assistant-turn не завершается обещанием review/hardening без фактических блоков `[PASSPORT CHALLENGE REVIEW]` и `[PASSPORT HARDENING INTERVIEW]`
+[ ] Post-draft assistant-turn не содержит review/hardening-блоки и останавливается на вопросе готовности к Passport Challenge Review
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights / Responsibility Map и Source Hygiene
 [ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
