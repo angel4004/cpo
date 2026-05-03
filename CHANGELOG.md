@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
+- Уточнён onboarding UX contract: bracket stage-markers теперь запрещены как future-plan текст и допустимы только как фактические boundary outputs с artifact сразу после marker.
+- Existing passport flow теперь явно классифицирует невидимый или недоступный паспорт как `visibility gap / missing input / needs follow-up` до запроса текста паспорта.
+- No-passport product onboarding усилен против raw methodology labels в turn с `Один следующий вопрос`: summary и intake должны говорить обычным русским языком без `Customer Value Chain`, `value metric`, `Decision rights` и похожих labels.
 - Добавлен UX Contract для onboarding: один assistant-turn должен вести к одному целевому действию пользователя, а intake, Draft Project Passport, Passport Challenge Review, Passport Hardening, Final Snapshot, Project Instructions и publication instructions разделены по шагам.
 - Onboarding metrics intake теперь начинается с ближайшего измеримого результата клиента и доказательства, а не с полного блока методических labels.
 - Routine decision rights intake удалён из no-passport onboarding: CPO / владелец продукта считается decision maker по умолчанию, а copilot уточняет только human checkpoints для legal, security, privacy, compliance, pricing, public claims, client commitments и руководства.
