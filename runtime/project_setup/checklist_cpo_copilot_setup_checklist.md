@@ -322,14 +322,18 @@
 Хороший ответ:
 [ ] Говорит, что первый паспорт — draft
 [ ] Проверяет, собрана ли Customer Value Chain
-[ ] Сам запускает Passport Challenge Review
-[ ] Не просит пользователя сначала поревьюить draft
 [ ] Не предлагает загрузить draft в Sources
-[ ] Находит critical и major weak points
-[ ] Не выгружает полный review-report по умолчанию
-[ ] Задаёт первый hardening-вопрос
-[ ] Первый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант
-[ ] Первый hardening-вопрос объясняет, какое поле паспорта изменится
+[ ] Если draft уже показан, спрашивает готовность к Passport Challenge Review
+[ ] Не просит пользователя самому ревьюить draft вместо Copilot review
+[ ] Не объединяет Draft Project Passport, Passport Challenge Review, Passport Hardening Interview, Final Passport Snapshot и Project Instructions в один assistant-turn
+[ ] После согласия пользователя запускает Passport Challenge Review отдельным assistant-turn
+[ ] В review-turn находит critical и major weak points
+[ ] В review-turn не выгружает полный review-report по умолчанию
+[ ] В review-turn спрашивает готовность перейти к первому hardening-вопросу
+[ ] После согласия пользователя переходит к Passport Hardening Interview отдельным assistant-turn
+[ ] В hardening-turn задаёт первый hardening-вопрос
+[ ] Hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант
+[ ] Hardening-вопрос объясняет, какое поле паспорта изменится
 [ ] Останавливается на первом hardening-вопросе и не выдаёт Final Passport Snapshot в том же ответе
 [ ] Не выбирает hardening decisions за пользователя
 [ ] Если пользователь уже добавил draft в Sources, первый вопрос касается удаления draft из Sources или замены его финальным паспортом после hardening

@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
+- Добавлен UX Contract для onboarding: один assistant-turn должен вести к одному целевому действию пользователя, а intake, Draft Project Passport, Passport Challenge Review, Passport Hardening, Final Snapshot, Project Instructions и publication instructions разделены по шагам.
 - Onboarding metrics intake теперь использует русские labels с canonical labels в скобках и объясняет, как value / business / usage / evidence / guardrail / baseline fields влияют на рекомендации copilot.
 - Decision rights intake теперь спрашивает только недостающие права принятия решений, если они реально нужны для ближайшего решения; повторный вопрос про финальную карту запрещён без нового риска или конфликта.
 - Draft Project Passport, Passport Challenge Review и Project Instructions разделены на отдельные assistant-turn: после draft copilot спрашивает готовность к review, а Project Instructions больше не дублируют полный паспорт проекта.
