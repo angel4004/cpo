@@ -31,7 +31,9 @@
 
 ## 3B. Подготовлен Project passport
 [ ] До draft passport пройдена развилка passport exists / no passport
-[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и основные роли клиента, Customer Value Chain, статус по слоям, evidence/data sources или unknown, минимальная карта ответственности за цель / decision rights или unknown
+[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и основные роли клиента, Customer Value Chain, статус по слоям, цели и рамка решения, publish-critical metrics / evidence или unknown, минимальная карта ответственности за цель / decision rights или unknown
+[ ] Статус `частично собрано` по publish-critical блоку не считается готовностью к Draft Project Passport и Passport Challenge Review
+[ ] Baseline / target metric, metric classes и data / evidence sources заданы пользователем или явно помечены пользователем как unknown
 [ ] До draft passport собран Customer Value Chain Intake
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
@@ -82,7 +84,8 @@
 ## 4B. Evidence gaps and one-question UX
 [ ] В no passport flow после Customer Value Chain Intake copilot не выдаёт сразу большой Draft Project Passport, а продолжает Project Context Intake одним вопросом за шаг
 [ ] В no passport flow evidence gap до draft фиксируется как missing context / unknown, а не как publish-blocking review претензия к пользователю
-[ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim только после draft или в existing passport flow
+[ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim только после корректного draft, где evidence labels уже были заданы, или в existing passport flow
+[ ] Premature draft с unasked / partial publish-critical evidence классифицируется как onboarding gap и возвращает поток к Project Context Intake
 [ ] Первый post-draft вопрос по evidence gap оформлен как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`
 [ ] Если пользователь говорит, что паспорт уже есть в Sources, но имя/содержимое не видно явно, copilot задаёт один вопрос о названии файла или тексте паспорта, а не ревьюит по памяти
 [ ] Пока текст паспорта не виден, copilot не обещает будущие review / hardening stage names как план
@@ -97,7 +100,7 @@
 [ ] Заполнено, что это за продукт в одной фразе
 [ ] Заполнено, чем здесь управляем
 [ ] Заполнены контуры продукта, процесса клиента, текущего решения и out-of-scope
-[ ] Заполнена минимальная карта ответственности за цель: внутри команды, решение о покупке / подключении у клиента, использование или внедрение со стороны клиента
+[ ] Заполнена минимальная карта ответственности за цель: owner внутри команды, решения owner, решения с отдельным подтверждением, а уже собранные роли клиента переиспользованы без повторного вопроса
 [ ] Заполнен текущий этап PLC
 [ ] Если релевантно, заполнен текущий этап внутри Product Discovery
 [ ] Заполнен статус запуска по слоям: доступность продукта (product availability), внедрение у клиентов (customer rollout), коммерческий статус (commercial status), готовность данных и интеграций (data / integration readiness)

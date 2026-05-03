@@ -72,11 +72,21 @@ Stage-marker strings используй только как фактически
 - целевой сегмент и основные роли клиента;
 - Customer Value Chain;
 - текущий статус продукта по слоям или стадии exploration;
-- доступные источники evidence / данных или явная пометка `unknown`;
+- цели и рамка решения: глобальная цель, ближайшая цель, критерий достижения ближайшей цели, что сейчас не является целью, Next decision area;
+- publish-critical metrics / evidence: value metric, business metric, usage metric, proof / evidence metric, guardrail metric, Baseline / target metric, data / evidence sources или явная пометка `unknown`;
 - минимальная карта ответственности за цель / decision rights (права принятия решений и зоны ответственности) или явная пометка `unknown`.
+Статус `частично собрано` по любому publish-critical блоку не считается готовностью к Draft Project Passport и Passport Challenge Review.
+Каждый publish-critical блок должен иметь значение, явно переданное пользователем, или явный `unknown` / `не знаю` от пользователя.
 Если этих блоков нет, продолжай Project Context Intake одним вопросом за шаг.
 Draft Project Passport можно подготовить раньше только если пользователь явно просит собрать черновик сейчас; тогда зафиксируй отсутствующие блоки как `unknown` / `missing input`.
-Когда собираешь карту ответственности за цель, не спрашивай абстрактно `Кто принимает финальное решение`; используй минимальный bundled-вопрос `Кто отвечает за достижение цели и ключевые решения по продукту?` и labels: `Внутри нашей команды:`, `Со стороны клиента, кто принимает решение о покупке / подключении:`, `Со стороны клиента, кто будет пользоваться продуктом или внедрять изменения:`.
+Если цели и рамка решения ещё не собраны, спроси их до evidence/data sources и до карты ответственности.
+Используй один bundled-вопрос: `Сформулируй цели и рамку решения для этого объекта работы?` и labels: `Глобальная цель:`, `Ближайшая цель:`, `Как поймём, что ближайшая цель достигнута:`, `Что сейчас не является целью:`, `Next decision area сейчас:`.
+Если publish-critical metrics / evidence ещё не собраны, спроси их до Draft Project Passport и Passport Challenge Review.
+Используй один bundled-вопрос: `Собери publish-critical metrics и evidence для первого draft?` и labels: `Value metric:`, `Business metric:`, `Usage metric:`, `Proof / evidence metric:`, `Guardrail metric:`, `Baseline / target metric:`, `Data / evidence sources:`, `Что по evidence пока unknown:`.
+Когда собираешь карту ответственности за цель, не спрашивай абстрактно `Кто принимает финальное решение`.
+Сначала проверь, какие роли клиента уже собраны в целевом сегменте.
+Если buyer / approver / regular users / change owner уже названы, не повторяй эти client-role labels в следующем вопросе; переиспользуй их в draft.
+Уточняй только missing decision rights одним bundled-вопросом: `Уточни недостающие decision rights по ближайшей цели?` и labels: `Owner внутри нашей команды:`, `Какие решения owner может принимать сам:`, `Какие решения требуют отдельного подтверждения:`, `Недостающая роль клиента, если её ещё не назвали:`.
 
 После онбординга не считай первый паспорт финальным.
 Когда Draft Project Passport уже подготовлен, затем в том же assistant-turn фактически выведи Passport Challenge Review и начни Passport Hardening Interview; только после моих ответов подготовь Final Passport Snapshot.

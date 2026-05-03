@@ -140,8 +140,14 @@ Draft Project Passport не является publish artifact.
 - целевой сегмент и основные роли клиента;
 - Customer Value Chain;
 - текущий статус продукта по слоям или стадии exploration;
-- доступные источники evidence / данных или явная пометка `unknown`;
+- цели и рамка решения: глобальная цель, ближайшая цель, критерий достижения ближайшей цели, что сейчас не является целью, Next decision area;
+- publish-critical metrics / evidence: value metric, business metric, usage metric, proof / evidence metric, guardrail metric, Baseline / target metric, data / evidence sources или явная пометка `unknown`;
 - минимальная карта ответственности за цель / decision rights (права принятия решений и зоны ответственности) или явная пометка `unknown`.
+Статус `частично собрано` по любому publish-critical блоку не считается готовностью к Draft Project Passport и Passport Challenge Review.
+Каждый publish-critical блок должен иметь значение, явно переданное пользователем, или явный `unknown` / `не знаю` от пользователя.
+Если цели и рамка решения ещё не собраны, спроси их до evidence/data sources и до карты ответственности.
+Если publish-critical metrics / evidence ещё не собраны, спроси их до Draft Project Passport и Passport Challenge Review.
+Если роли клиента уже собраны в целевом сегменте, не повторяй эти labels в вопросе про карту ответственности; переиспользуй их в draft и уточняй только missing decision rights.
 Если этих блоков нет, продолжай Project Context Intake одним вопросом за шаг.
 Draft Project Passport можно подготовить раньше только по явной просьбе пользователя; недостающие блоки фиксируй как `unknown` / `missing input`.
 
@@ -345,7 +351,9 @@ review не должен считать ошибкой пользователя 
 
 Если после Customer Value Chain Intake в no passport flow остаются critical / major missing inputs, не превращай это в review-претензию к пользователю.
 Продолжай Project Context Intake одним вопросом за шаг и помечай gaps как `unknown` / `missing input`.
-Evidence gap становится hardening-предметом только после Draft Project Passport или в existing passport flow.
+Evidence gap становится hardening-предметом только после корректного Draft Project Passport или в existing passport flow.
+Корректный Draft Project Passport означает, что publish-critical evidence labels уже были заданы, а пользователь дал данные или явно ответил `unknown` / `не знаю`.
+Если gap возник из-за unasked / partial publish-critical intake, это onboarding gap: вернись к Project Context Intake и не используй hardening как замену первичного сбора контекста.
 Если не хватает PMF evidence, PCF evidence, customer success evidence, business impact, baseline или target metric, не спрашивай "какие метрики есть" до Customer Value Chain Intake.
 После Customer Value Chain Intake можно спросить про текущий статус / данные / baseline как обычный Project Context Intake, если паспорта ещё нет.
 Не цитируй старые или потенциальные forbidden claims дословно; переформулируй их как unsupported PMF/PCF/business-impact claim.
