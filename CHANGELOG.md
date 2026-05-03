@@ -2,11 +2,12 @@
 
 ## Unreleased
 - Добавлен UX Contract для onboarding: один assistant-turn должен вести к одному целевому действию пользователя, а intake, Draft Project Passport, Passport Challenge Review, Passport Hardening, Final Snapshot, Project Instructions и publication instructions разделены по шагам.
-- Onboarding metrics intake теперь использует русские labels с canonical labels в скобках и объясняет, как value / business / usage / evidence / guardrail / baseline fields влияют на рекомендации copilot.
-- Decision rights intake теперь спрашивает только недостающие права принятия решений, если они реально нужны для ближайшего решения; повторный вопрос про финальную карту запрещён без нового риска или конфликта.
+- Onboarding metrics intake теперь начинается с ближайшего измеримого результата клиента и доказательства, а не с полного блока методических labels.
+- Routine decision rights intake удалён из no-passport onboarding: CPO / владелец продукта считается decision maker по умолчанию, а copilot уточняет только human checkpoints для legal, security, privacy, compliance, pricing, public claims, client commitments и руководства.
 - Draft Project Passport, Passport Challenge Review и Project Instructions разделены на отдельные assistant-turn: после draft copilot спрашивает готовность к review, а Project Instructions больше не дублируют полный паспорт проекта.
 - Onboarding no passport flow теперь явно собирает цели и рамку решения до draft passport, а вопрос про карту ответственности не должен повторять уже собранные роли клиента.
-- Publish-critical поля со статусом `частично собрано` больше не считаются готовыми к Draft Project Passport / Passport Challenge Review; baseline, target metric, metric classes и data/evidence sources должны быть собраны или явно помечены пользователем как `unknown`.
+- Критичные поля со статусом `частично собрано` больше не считаются готовыми к Draft Project Passport / проверке паспорта; текущая альтернатива, baseline, target и источники данных должны быть собраны или явно помечены пользователем как `unknown`.
+- User-facing onboarding теперь закреплён как plain-language contract: вопросы не должны выводить методические англицизмы вроде Customer Value Chain Intake, publish-critical metrics, decision rights или Next decision area.
 - В корневом README блок `Для чего он нужен` перенесён выше блока `Что это`, чтобы сначала показать ценность, а затем формат подключения.
 - Перестроено описание ценности CPO Copilot: блок объясняет связь идей, фич и решений с целями продукта и бизнеса, контекст перед решением и риск фич без понятного основания.
 
@@ -18,7 +19,7 @@
 - Onboarding Sources Check получил явные empty-state формулировки без двойных отрицаний и различает clean setup от setup with project artifacts.
 - Onboarding flow теперь сначала разводит ветки `passport exists` / `no passport`: без паспорта CPO собирает context intake вопросами, а с паспортом запускает review / hardening существующего паспорта.
 - Project Context Intake усилен правилом одной question-line за шаг; старый паспорт без новых полей явно маркируется как `это не ошибка автора`.
-- Неоднозначные onboarding-поля заменены на явные, но компактные контексты: минимальная карта ответственности за цель, основные роли клиента, статус запуска по слоям, глобальная и ближайшая цель, классы метрик и источники правды по типам.
+- Неоднозначные onboarding-поля заменены на явные, но компактные контексты: human checkpoints, текущая альтернатива, основные роли клиента, статус запуска по слоям, глобальная и ближайшая цель, классы метрик и источники правды по типам.
 - PAF-routing поведение до последней wording-правки проверено full API baseline matrix: GPT-5.5 + Sonnet 4.6, 2 прогона на модель, 5 PAF-сценариев, итог `20/20 pass`.
 
 ## v0.3.0

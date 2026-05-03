@@ -40,9 +40,9 @@ CPO Copilot — это набор markdown-инструкций для GPT Proje
 6. Открой файл [PROMPT] Launch CPO Copilot: [runtime/project_setup/prompt_launch_cpo_copilot.md](runtime/project_setup/prompt_launch_cpo_copilot.md).
 7. Скопируй весь текст из этого файла в первый чат проекта.
 8. Пройди онбординг.
-9. Дойди до Customer Value Chain Intake, Draft Project Passport, Passport Challenge Review, Passport Hardening Interview и Final Passport Snapshot.
-   После черновика copilot должен остановиться и спросить готовность к Passport Challenge Review.
-   Passport Challenge Review и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]` идут отдельным assistant-turn после согласия.
+9. Дойди до цепочки клиентской ценности, Draft Project Passport, проверки паспорта, уточняющих вопросов и Final Passport Snapshot.
+   После черновика copilot должен остановиться и спросить готовность проверить паспорт проекта.
+   Проверка паспорта и, если есть critical / major weak points, `[PASSPORT HARDENING INTERVIEW]` идут отдельным assistant-turn после согласия.
    Stage-маркеры должны быть standalone-строками без пробелов внутри квадратных скобок и без suffix на той же строке.
    Hardening идёт пошагово: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
    Copilot не должен сразу выдавать Final Passport Snapshot: сначала нужно ответить на hardening-вопросы.
@@ -65,7 +65,7 @@ CPO Copilot — это набор markdown-инструкций для GPT Proje
 ## Что где лежит
 - `runtime/core` — канон и методическая база copilot.
 - `runtime/project_setup/start_here_activate_cpo_copilot.md` — протокол активации, по которому copilot должен работать внутри проекта.
-- `runtime/project_setup/method_project_passport_review_and_hardening_for_cpo_copilot.md` — процесс Customer Value Chain Intake, Passport Challenge Review, Passport Hardening и финальной публикации паспорта.
+- `runtime/project_setup/method_project_passport_review_and_hardening_for_cpo_copilot.md` — процесс сбора цепочки клиентской ценности, проверки паспорта, hardening-вопросов и финальной публикации паспорта.
 - `runtime/project_setup/prompt_launch_cpo_copilot.md` — только текст первого сообщения.
 - `releases/` — релизные заметки. Это не стартовая точка.
 
@@ -86,4 +86,4 @@ Git — источник истины для рабочего пакета. В `
 - устаревшие документы без пометки, что они устарели;
 - большие наборы файлов, не связанные с текущим продуктом или вопросом.
 
-Draft Project Passport — это рабочий черновик только для чата (`chat-only working artifact`). В `Sources` добавляется только финальный стабильный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening.
+Draft Project Passport — это рабочий черновик только для чата (`chat-only working artifact`). В `Sources` добавляется только финальный стабильный `[PROJECT PASSPORT]` после проверки и hardening-вопросов.
