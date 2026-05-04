@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
+- Усилен системный guardrail onboarding: raw methodology labels теперь запрещены во всём user-facing turn, включая summary, snapshot, hardening queue и readiness-фразы, даже если пользователь сам написал label.
+- Evidence-gap existing passport flow получил controlled fast path: при явном отсутствии PMF/PCF/business-impact evidence copilot должен сразу дать `[PASSPORT HARDENING INTERVIEW]` с A/B/C по evidence-полю, не ожидая полного review.
+- Hardening flow больше не должен показывать patch после каждого A/B/C ответа; изменения собираются в consolidated update / Final Passport Snapshot после critical / major hardening-вопросов.
 - Уточнён onboarding UX contract: bracket stage-markers теперь запрещены как future-plan текст и допустимы только как фактические boundary outputs с artifact сразу после marker.
 - Existing passport flow теперь явно классифицирует невидимый или недоступный паспорт как `visibility gap / missing input / needs follow-up` до запроса текста паспорта.
 - No-passport product onboarding усилен против raw methodology labels в turn с `Один следующий вопрос`: summary и intake должны говорить обычным русским языком без `Customer Value Chain`, `value metric`, `Decision rights` и похожих labels.

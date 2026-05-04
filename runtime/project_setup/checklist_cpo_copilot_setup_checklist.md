@@ -7,12 +7,12 @@
 ## 1. Базовая сборка проекта
 [ ] Downstream CPO copilot project уже создан по корневому README
 [ ] Понятно, что это рабочий продуктовый проект, а не внутренняя мастерская PAF
-[ ] Определён человек, который принимает финальное решение
+[ ] CPO / владелец продукта считается ответственным за продуктовые решения по умолчанию
 [ ] Понятно, есть ли уже паспорт проекта из другого Copilot
 [ ] Если паспорта нет, copilot запускает последовательный Project Context Intake
-[ ] Если паспорт уже есть, copilot запускает review паспорта на ошибки, плохие формулировки, gaps и уточнение контекста
+[ ] Если паспорт уже есть, copilot запускает проверку паспорта на gaps, рискованные формулировки и уточнение контекста
 [ ] В Project Context Intake один шаг содержит одну question-line с одним `?`, а дополнительные поля оформлены как labels без вопросительных знаков
-[ ] Copilot не пытается собрать весь минимальный context set одним большим intake-блоком; исключение — Customer Value Chain Intake четырьмя labels
+[ ] Copilot не пытается собрать весь минимальный context set одним большим intake-блоком; исключение — цепочка ценности клиента четырьмя labels
 [ ] Понятно, в какой из двух ситуаций запускаем copilot:
 [ ] Product mode — продукт или объект работы уже есть
 [ ] Exploration mode — продукта пока нет и нужно выбрать направление
@@ -24,13 +24,13 @@
 
 ## 3. Подготовлен Project passport
 [ ] До draft passport пройдена развилка passport exists / no passport
-[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и основные роли клиента, Customer Value Chain, статус по слоям, цели и рамка решения, publish-critical metrics / evidence или unknown, минимальная карта ответственности за цель / decision rights или unknown
+[ ] В no passport flow до draft passport собран минимальный context set: объект работы, сегмент и основные роли клиента, цепочка ценности клиента, статус по слоям, цели и рамка решения, критичные метрики и доказательства или unknown, отдельные human checkpoints для legal/security/privacy/pricing/public claims/client commitments или unknown
 [ ] Статус `частично собрано` по publish-critical блоку не считается готовностью к Draft Project Passport и Passport Challenge Review
-[ ] Baseline / target metric, metric classes и data / evidence sources заданы пользователем или явно помечены пользователем как unknown
-[ ] До draft passport собран Customer Value Chain Intake
+[ ] Текущее и целевое значение, классы метрик и источники данных заданы пользователем или явно помечены пользователем как unknown
+[ ] До draft passport собрана цепочка ценности клиента
 [ ] Copilot подготовил [DRAFT PROJECT PASSPORT] как рабочий черновик, а не финальный source document
 [ ] Stage-маркер `[DRAFT PROJECT PASSPORT]` написан дословно отдельной строкой, без пробелов внутри `[]` и без suffix
-[ ] Draft passport содержит Customer Value Chain или явно фиксирует unknown / missing inputs
+[ ] Draft passport содержит цепочку ценности клиента или явно фиксирует unknown / missing inputs
 [ ] После draft passport copilot остановился и спросил готовность к Passport Challenge Review
 [ ] Stage-маркер `[PASSPORT CHALLENGE REVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт отдельным assistant-turn после согласия пользователя
 [ ] Copilot не объединяет Draft Project Passport, Passport Challenge Review и Passport Hardening Interview в один assistant-turn
@@ -74,7 +74,7 @@
 [ ] Copilot при проверке состава рабочего пакета опирается на [START HERE], а не на собственный список
 [ ] Если рабочий markdown-пакет подключён полностью, copilot пишет позитивный статус без двойных отрицаний: `Рабочий markdown-пакет подключён полностью.`
 [ ] Первый onboarding-ответ различает clean setup и setup with project artifacts, не превращая clean setup в тяжёлый audit report
-[ ] Если passport status unclear, первый user-facing вопрос — о наличии паспорта проекта из другого Copilot, а не о режиме и не Customer Value Chain Intake
+[ ] Если passport status unclear, первый user-facing вопрос — о наличии паспорта проекта из другого Copilot, а не о режиме и не о цепочке ценности клиента
 [ ] Если рабочий пакет подключён полностью, первый ответ не перечисляет все 14 файлов, а показывает grouped summary `Core: 4/4, Project setup: 10/10`
 [ ] В exploration mode без продукта copilot не предлагает варианты, завязанные на существующий продукт, платформу, трафик или аналитику
 [ ] Copilot не просит добавлять шумные raw-export материалы без явной пользы
@@ -83,7 +83,7 @@
 [ ] Copilot спокойно принимает ответ `unknown` или `не знаю`, если пользователь чего-то не знает
 
 ## 4B. Evidence gaps and one-question UX
-[ ] В no passport flow после Customer Value Chain Intake copilot не выдаёт сразу большой Draft Project Passport, а продолжает Project Context Intake одним вопросом за шаг
+[ ] В no passport flow после цепочки ценности клиента copilot не выдаёт сразу большой Draft Project Passport, а продолжает Project Context Intake одним вопросом за шаг
 [ ] В no passport flow evidence gap до draft фиксируется как missing context / unknown, а не как publish-blocking review претензия к пользователю
 [ ] Evidence gap фиксируется в [DRAFT PROJECT PASSPORT] как unknown / missing project evidence / forbidden claim только после корректного draft, где evidence labels уже были заданы, или в existing passport flow
 [ ] Premature draft с unasked / partial publish-critical evidence классифицируется как onboarding gap и возвращает поток к Project Context Intake
@@ -101,13 +101,13 @@
 [ ] Заполнено, что это за продукт в одной фразе
 [ ] Заполнено, чем здесь управляем
 [ ] Заполнены контуры продукта, процесса клиента, текущего решения и out-of-scope
-[ ] Заполнена минимальная карта ответственности за цель: owner внутри команды, решения owner, решения с отдельным подтверждением, а уже собранные роли клиента переиспользованы без повторного вопроса
+[ ] Заполнены отдельные подтверждения для цели: что CPO / владелец продукта решает сам, что требует legal/security/privacy/pricing/public claims/client commitments/leadership, а уже собранные роли клиента переиспользованы без повторного вопроса
 [ ] Заполнен текущий этап PLC
 [ ] Если релевантно, заполнен текущий этап внутри Product Discovery
 [ ] Заполнен статус запуска по слоям: доступность продукта (product availability), внедрение у клиентов (customer rollout), коммерческий статус (commercial status), готовность данных и интеграций (data / integration readiness)
 [ ] Заполнены цели на длинный горизонт
 [ ] Заполнены цели на ближайший горизонт
-[ ] Заполнен Next decision area сейчас
+[ ] Заполнено, что проверяем следующим сейчас
 [ ] Заполнен горизонт решения
 [ ] Заполнены глобальная цель, ближайшая цель, критерий достижения ближайшей цели и что сейчас не является целью
 [ ] Заполнены ключевые сегменты
@@ -116,14 +116,14 @@
 [ ] Заполнено, что даёт продукт
 [ ] Заполнено, что клиент с этим делает
 [ ] Заполнено, что клиент получает в измеримом результате
-[ ] Если Customer Value Chain не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
+[ ] Если цепочка ценности клиента не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
 [ ] Заполнена текущая бизнес-модель
 [ ] Заполнено, что уже понятно по выводу на рынок, если это релевантно
 [ ] Заполнены допущения по экономике, если это релевантно
 [ ] Метрики разделены на метрику ценности (value), бизнес-метрику (business), метрику использования (usage), метрику доказательности (proof / evidence) и ограничительную метрику (guardrail)
 [ ] Заполнены подтверждённые данные
 [ ] Разведены подтверждённое и предположения
-[ ] Если есть PMF-claim, заполнены PMF metric, baseline / norm / benchmark и assumptions about norm
+[ ] Если есть PMF-claim, заполнены метрика PMF, текущее значение / норма / ориентир и допущения о норме
 [ ] Если обсуждается переход к Product Growth, PMF не утверждается без отдельного PMF evidence block
 [ ] Заполнены активные гипотезы
 [ ] Гипотезы разложены на customer, value proposition, solution и business model
@@ -138,7 +138,7 @@
 [ ] Указаны источники правды по продуктовым фактам, данным/метрикам, методологии и текущему решению
 [ ] Указаны дата обновления, владелец обновления и триггеры обновления
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с product context
-[ ] [PROJECT PASSPORT] содержит Customer Value Chain
+[ ] [PROJECT PASSPORT] содержит цепочку ценности клиента
 [ ] [PROJECT PASSPORT] содержит PMF evidence или явное `not assessed`
 [ ] [PROJECT PASSPORT] содержит Hypothesis map
 
@@ -150,8 +150,8 @@
 [ ] Названы направления, которые уже рассматриваются
 [ ] Названы потенциальные аудитории
 [ ] Названы потенциальные проблемы или потребности
-[ ] Собрана кандидатная Customer Value Chain как гипотеза, а не подтверждённый product context
-[ ] Если кандидатная Customer Value Chain не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
+[ ] Собрана кандидатная цепочка ценности клиента как гипотеза, а не подтверждённый product context
+[ ] Если кандидатная цепочка ценности клиента не заполнена, явно указаны unknown, missing inputs, что проверить и какие claims нельзя делать
 [ ] Зафиксированы уже существующие сигналы
 [ ] Разведены факты и допущения
 [ ] Названы ограничения и риски
@@ -159,7 +159,7 @@
 [ ] Назван следующий маленький тест
 [ ] Понятно, при каких условиях можно перейти в product mode
 [ ] Подготовлен [PROJECT PASSPORT] Паспорт проекта с exploration context
-[ ] [PROJECT PASSPORT] содержит Candidate Customer Value Chain или явно фиксирует missing inputs
+[ ] [PROJECT PASSPORT] содержит кандидатную цепочку ценности клиента или явно фиксирует missing inputs
 
 ## 6. Источники правды реально подключены
 [ ] Подключены локальные документы, если они есть
@@ -193,9 +193,9 @@
 [ ] Draft / Review / Hardening выводятся с дословными standalone stage-маркерами `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`
 [ ] Stage-маркеры не содержат пробелов внутри квадратных скобок и suffix вроде `compact`, `Question 1/3`, тире или двоеточия на той же строке
 [ ] Post-draft assistant-turn не содержит review/hardening-блоки и останавливается на вопросе готовности к Passport Challenge Review
-[ ] Passport Challenge Review включает Evidence, PAF Consistency, Customer Value Chain, SMART, Metrics, Decision Rights / Responsibility Map и Source Hygiene
-[ ] Customer Value Chain Review идёт до SMART Review и Metrics Review
-[ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, decision rights issue, source hygiene issue, forbidden claim, publish blocker и wording issue
+[ ] Passport Challenge Review включает Evidence, PAF Consistency, цепочку ценности клиента, SMART, Metrics, Human Checkpoints и Source Hygiene
+[ ] Проверка цепочки ценности клиента идёт до SMART Review и Metrics Review
+[ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, human checkpoint issue, source hygiene issue, forbidden claim, publish blocker и wording issue
 [ ] Hardening-вопросы предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C
 [ ] Hardening-вопросы рекомендуют один вариант, если контекста достаточно
 [ ] Hardening-вопросы по missing inputs оформлены как `[PASSPORT HARDENING INTERVIEW]`, а не как обычный intake-вопрос
@@ -206,7 +206,7 @@
 [ ] Review не представляет локальные адаптации как канон PAF
 [ ] Review не утверждает PMF, PCF, customer success или бизнес-эффект без evidence
 [ ] No Hidden Review Criteria соблюдено: отсутствие поля, которое onboarding не спрашивал, классифицируется как onboarding gap / missing input / needs follow-up
-[ ] Для старых паспортов доступен Retrospective Passport Review
+[ ] Для старых паспортов доступна ретроспективная проверка старого паспорта
 [ ] Copilot не обновляет Sources автоматически
 
 ## 8. Smoke tests
@@ -300,7 +300,7 @@
 Хороший ответ:
 [ ] Проверяет PMF evidence block
 [ ] Называет PMF claim, segment, need и alternative
-[ ] Проверяет PMF metric и связь метрики с частотностью потребности
+[ ] Проверяет метрику PMF и связь метрики с частотностью потребности
 [ ] Проверяет baseline / norm / benchmark и assumptions about norm
 [ ] Показывает qualitative evidence
 [ ] Называет missing inputs и forbidden claims, если доказательств не хватает
@@ -321,7 +321,7 @@
 
 Хороший ответ:
 [ ] Говорит, что первый паспорт — draft
-[ ] Проверяет, собрана ли Customer Value Chain
+[ ] Проверяет, собрана ли цепочка ценности клиента
 [ ] Не предлагает загрузить draft в Sources
 [ ] Если draft уже показан, спрашивает готовность к Passport Challenge Review
 [ ] Не просит пользователя самому ревьюить draft вместо Copilot review
@@ -336,18 +336,18 @@
 [ ] Hardening-вопрос объясняет, какое поле паспорта изменится
 [ ] Останавливается на первом hardening-вопросе и не выдаёт Final Passport Snapshot в том же ответе
 [ ] Не выбирает hardening decisions за пользователя
-[ ] Если пользователь уже добавил draft в Sources, первый вопрос касается удаления draft из Sources или замены его финальным паспортом после hardening
+[ ] Если пользователь уже добавил draft в Sources, первый вопрос касается удаления draft из Sources или замены его финальным паспортом после уточнений
 [ ] Готовит Final Passport Snapshot только после ответов пользователя на hardening-вопросы
 [ ] Объясняет, что финальный [PROJECT PASSPORT] пользователь сохраняет и добавляет в Sources вручную
 
-### Тест 11 — старый паспорт без Customer Value Chain
+### Тест 11 — старый паспорт без цепочки ценности клиента
 Запрос:
 «Проверь старый паспорт проекта, в нём нет цепочки клиентской ценности.»
 
 Хороший ответ:
-[ ] Запускает Retrospective Passport Review
-[ ] Объясняет, что старый onboarding не собирал Customer Value Chain
-[ ] Классифицирует отсутствие customer action или customer outcome как onboarding gap / missing input / needs follow-up
+[ ] Запускает ретроспективную проверку старого паспорта
+[ ] Объясняет, что старый onboarding не собирал цепочку ценности клиента
+[ ] Классифицирует отсутствие действия клиента или измеримого результата клиента как onboarding gap / missing input / needs follow-up
 [ ] Не называет это персональным дефектом автора паспорта
 
 ## 9. Дисциплина обновления

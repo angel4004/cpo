@@ -11,7 +11,7 @@
 - Создание GPT/Claude Project и настройка памяти описаны в корневом [README.md](../../README.md).
 
 ## Что должно получиться после активации
-После онбординга copilot должен провести draft/review/hardening пошагово и выдать 2 результата отдельными шагами:
+После онбординга copilot должен провести черновик, проверку и уточнение паспорта пошагово и выдать 2 результата отдельными шагами:
 - `[PROJECT INSTRUCTIONS]` — текст для поля `Project instructions`;
 - `[PROJECT PASSPORT]` — финальный стабильный markdown-файл, который нужно сохранить и добавить в `Sources`.
 
@@ -19,28 +19,28 @@
 До публикации в Sources должны пройти:
 
 ```text
-Customer Value Chain Intake
-→ Draft Project Passport
-→ Passport Challenge Review
-→ Passport Hardening Interview
-→ Final Passport Snapshot
-→ Project Instructions
+Цепочка ценности клиента
+→ Черновик паспорта
+→ Проверка паспорта
+→ Уточнение паспорта
+→ Финальная версия паспорта
+→ Инструкции проекта
 ```
 
 Финальный [PROJECT PASSPORT] пользователь сохраняет отдельным markdown-файлом и добавляет в Sources вручную.
 Copilot не обновляет Sources автоматически.
-После draft copilot останавливается и спрашивает готовность к Passport Challenge Review.
-Passport Challenge Review и Passport Hardening Interview идут отдельным assistant-turn после согласия пользователя.
+После draft copilot останавливается и спрашивает готовность проверить паспорт проекта.
+Проверка паспорта и уточнение паспорта идут отдельным assistant-turn после согласия пользователя.
 Project Instructions готовятся отдельным шагом и не дублируют полный паспорт проекта.
 Stage-маркеры должны быть standalone-строками ровно в таком виде: `[DRAFT PROJECT PASSPORT]`, `[PASSPORT CHALLENGE REVIEW]`, `[PASSPORT HARDENING INTERVIEW]`.
 Пробелы внутри квадратных скобок, suffix вроде `compact` / `Question 1/3` и объединённые заголовки недопустимы.
-После compact review copilot должен вести Passport Hardening как controlled interview: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
-Copilot не должен сразу выдавать Final Passport Snapshot: сначала пользователь отвечает на hardening-вопросы.
+После компактной проверки copilot должен вести уточнение паспорта как controlled interview: один вопрос за шаг, не более одного вопросительного знака в assistant-turn, 2-3 варианта ответа в формате A/B/C, один рекомендованный вариант, `Поле паспорта:` и `Что изменится в паспорте:`.
+Copilot не должен сразу выдавать Final Passport Snapshot: сначала пользователь отвечает на уточняющие вопросы.
 
 ## Что можно убрать из Sources после активации
 Если выполнены все условия ниже, setup-файлы из `runtime/project_setup` можно убрать из `Sources`:
 - текст `[PROJECT INSTRUCTIONS]` уже вставлен в поле `Project instructions`;
-- финальный `[PROJECT PASSPORT]` после Passport Challenge Review и Passport Hardening уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
+- финальный `[PROJECT PASSPORT]` после проверки и уточнения паспорта уже сохранён отдельным markdown-файлом и добавлен в `Sources`;
 - повторная активация проекта сейчас не нужна.
 
 Что должно остаться в `Sources`:

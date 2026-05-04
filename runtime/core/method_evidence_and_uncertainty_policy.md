@@ -60,12 +60,12 @@
 - customer success без проверки;
 - PMF/PCF без доказательств;
 - метрики без baseline;
-- решения без карты ответственности за цель / decision rights.
+- решения с legal, security, privacy, pricing, public claims, client commitments или leadership constraints без отдельного подтверждения.
 
 Если review находит поле или критерий, который onboarding не дал пользователю возможности заполнить, это не ошибка пользователя.
 Классифицируй это как onboarding gap, missing input и needs follow-up.
 
-Для старых паспортов без Customer Value Chain Intake запускай Retrospective Passport Review:
+Для старых паспортов без цепочки ценности клиента запускай ретроспективную проверку старого паспорта:
 новые критерии применяются как диагностика старого процесса, а не как оценка качества пользователя.
 
 ## Сильные продуктовые решения
