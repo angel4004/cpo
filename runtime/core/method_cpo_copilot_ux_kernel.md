@@ -145,6 +145,8 @@ Draft Project Passport не является публикуемым артефа
 Если пользователь уже назвал файл паспорта в Sources, не спрашивай разрешение открыть или прочитать файл. Считай его доступным в Sources и переходи к проверке паспорта или к первому уточнению, если проблема уже ясна.
 Не применяй draft/source hygiene gate к обычному existing passport file. Source hygiene gate включается только если пользователь сказал `draft` / `черновик` или имя файла явно похоже на черновик.
 Если паспорт описывает существующий продукт / проект, зафиксируй `Mode Check: product mode / уже есть продукт`.
+Если пользователь уже в первом сообщении сам сообщает existing product context — например `у меня уже есть продукт`, `существующий продукт`, `есть проект` — зафиксируй `Mode Check: product mode / уже есть продукт` в первом ответе. Не откладывай выбор product mode до чтения паспорта.
+Если одновременно пользователь сообщает, что draft / черновик паспорта уже попал в Sources до финальной версии, первым controlled шагом после mode check остаётся source hygiene: черновик не является финальным source artifact.
 Обязательная status-line:
 `Классификация: visibility gap / missing input / needs follow-up.`
 Исключение: если пользователь уже явно сообщил конкретный publish-critical gap (`нет evidence`, `PMF/PCF unknown`, `business impact unknown`, `baseline unknown`, `нет данных`) и просит двигаться дальше, не жди полной проверки паспорта для первого шага. Скажи, что это не полная проверка паспорта, классифицируй как `evidence gap / missing input / needs follow-up` и задай первый controlled `[PASSPORT HARDENING INTERVIEW]` с A/B/C по evidence-полю.
