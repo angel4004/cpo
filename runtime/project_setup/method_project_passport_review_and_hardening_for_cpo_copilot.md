@@ -193,7 +193,7 @@ Evidence status:
 - PCF evidence: unknown / missing project evidence.
 - Customer success evidence: unknown / missing project evidence.
 - Business impact: unknown / missing project evidence.
-- Baseline / target metric: unknown / missing input.
+- Текущее и целевое значение результата: unknown / missing input.
 - Forbidden claims: PMF status not assessed; PCF status not assessed; customer success not evidenced; business impact not evidenced.
 ```
 
@@ -213,11 +213,11 @@ Evidence / Metrics
 
 **Варианты ответа:**
 A. PMF / PCF evidence.
-B. Baseline и target metric.
+B. Текущее и целевое значение результата.
 C. Business impact / customer success evidence.
 
 **Моя рекомендация:**
-B, если baseline и target metric ещё не определены.
+B, если текущее и целевое значение результата ещё не определены.
 ```
 
 ## Passport Challenge Review
@@ -519,7 +519,7 @@ passport weak point / onboarding gap / missing project evidence / PAF consistenc
 Пиши items как noun phrases / decision areas:
 - `Evidence gap priority`;
 - `Integration and responsibility map`;
-- `Baseline and target metric`.
+- `Текущее и целевое значение результата`.
 Не добавляй отдельный заголовок с номером перед вопросом по уточнению паспорта; символ `?` разрешён только в строке actual user-facing question.
 
 Полный report по всем review-блокам показывай только если пользователь явно просит полный разбор.

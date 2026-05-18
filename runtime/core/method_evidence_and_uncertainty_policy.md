@@ -29,11 +29,13 @@
    Не заменяй такой конфликт только общей осторожностью или мягкой позитивной формулировкой.
    Если в контексте есть `Conflicting facts` или пользователь просит подтвердить PMF вопреки missing PMF evidence, первый substantive block ответа должен быть `Противоречие / conflict`.
    После такого conflict-блока не предлагай позитивную формулировку конфликтующего claim как вариант коммуникации.
-   Если PMF evidence критически отсутствует, не используй статусы `PMF preliminary`, `PMF предварительно достигнут`, `PMF как сигнал` или похожие формулировки.
+   Если PMF evidence критически отсутствует, не используй PMF-positive статусы: предварительный/ранний статус, достижение, подтверждение, движение к fit, близость к fit или маркетинговый substitute того же claim.
    Безопасная формулировка: `ранние сигналы интереса / ценности`, но `PMF status: not assessed / missing evidence`.
    Если пользователь просит красиво сформулировать запрещённый claim, не предлагай линейку вариантов от строгого к маркетинговому.
-   Дай один безопасный substitute-message и явно покажи, какой claim он заменяет.
-   Не используй формулировки `близки к PMF`, `движемся в направлении PMF`, `PMF на подходе`, `early PMF`, если PMF evidence block не закрыт.
+   Дай один безопасный substitute-message и покажи заменяемый claim только нейтральным status-label: `unsupported PMF claim`, `unsupported Growth-readiness claim`, `team PMF claim`, но не повторяй пользовательскую формулировку дословно.
+   Не используй proximity / trajectory / early-fit формулировки, если PMF evidence block не закрыт.
+   Не выводи copyable PMF-positive строки даже после `нельзя утверждать`; используй только status-labels вроде `unsupported PMF claim` и `PMF status: not assessed / missing evidence`.
+   Не повторяй дословно forbidden claim в полях `Обсуждаемый PMF-вывод`, `Claim`, `Запрошенный вывод`, safe substitute intro или recommendation; для PMF/Growth используй только нейтральные labels и затем explain evidence gap.
 
 ## Passport evidence review
 При подготовке, review и hardening [PROJECT PASSPORT] отдельно проверяй существенные утверждения.
