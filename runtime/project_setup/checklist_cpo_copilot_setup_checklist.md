@@ -36,16 +36,16 @@
 [ ] Copilot не объединяет Draft Project Passport, Passport Challenge Review и Passport Hardening Interview в один assistant-turn
 [ ] Copilot не связывает Draft Project Passport с публикацией в Sources
 [ ] Copilot не выгружает полный review-report по умолчанию
-[ ] Copilot помог выполнить Passport Hardening как controlled interview после Passport Challenge Review, если review нашёл critical / major weak points
+[ ] Copilot помог выполнить уточнение паспорта как controlled interview после Passport Challenge Review, если review нашёл critical / major weak points
 [ ] Stage-маркер `[PASSPORT HARDENING INTERVIEW]` написан дословно отдельной строкой, без пробелов внутри `[]`, без suffix и идёт после `[PASSPORT CHALLENGE REVIEW]`
-[ ] Hardening идёт один вопрос за шаг
-[ ] Hardening-шаг содержит ровно один user-facing вопрос и не более одного вопросительного знака во всём assistant-turn
-[ ] Каждый hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант, если контекста достаточно
-[ ] Каждый hardening-вопрос содержит `Поле паспорта:` и `Что изменится в паспорте:`
-[ ] Copilot останавливается на первом hardening-вопросе и ждёт ответа пользователя
-[ ] Copilot не выбирает hardening decisions за пользователя
-[ ] Если draft уже добавлен в Sources, первый hardening-вопрос исправляет source hygiene
-[ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT] только после ответов пользователя на critical / major hardening questions
+[ ] Уточнение паспорта идёт один вопрос за шаг
+[ ] Шаг уточнения паспорта содержит ровно один user-facing вопрос и не более одного вопросительного знака во всём assistant-turn
+[ ] Каждый вопрос по уточнению паспорта содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант, если контекста достаточно
+[ ] Каждый вопрос по уточнению паспорта содержит `Поле паспорта:` и `Что изменится в паспорте:`
+[ ] Copilot останавливается на первом вопросе по уточнению паспорта и ждёт ответа пользователя
+[ ] Copilot не выбирает решения по уточнению паспорта за пользователя
+[ ] Если draft уже добавлен в Sources, первый вопрос по уточнению паспорта исправляет source hygiene
+[ ] Copilot подготовил [FINAL PROJECT PASSPORT SNAPSHOT] только после ответов пользователя на critical / major вопросы по уточнению паспорта
 [ ] Copilot прямо объяснил, что только финальный [PROJECT PASSPORT] нужно сохранить отдельным markdown-файлом
 [ ] Финальный паспорт сохранён и добавлен в Sources вручную
 
@@ -90,12 +90,12 @@
 [ ] Первый post-draft вопрос по evidence gap оформлен как `[PASSPORT HARDENING INTERVIEW]` с `Поле паспорта:` и `Что изменится в паспорте:`
 [ ] Если пользователь говорит, что паспорт уже есть в Sources, но имя/содержимое не видно явно, copilot задаёт один вопрос о названии файла или тексте паспорта, а не ревьюит по памяти
 [ ] Если пользователь уже назвал файл паспорта в Sources, copilot не спрашивает отдельное разрешение открыть или прочитать файл
-[ ] Пока нет ни имени файла паспорта, ни видимого текста паспорта, copilot не обещает будущие review / hardening stage names как план
+[ ] Пока нет ни имени файла паспорта, ни видимого текста паспорта, copilot не обещает будущие stage names для проверки / уточнения паспорта как план
 [ ] Для старого паспорта без новых полей copilot использует безопасную формулировку `это не ошибка автора`
 [ ] Ready-to-send письма, task, request и checklist не содержат разделов с несколькими вопросами через `?`
 [ ] Внутренние пункты таких артефактов оформлены как labels / пункты для подтверждения без вопросительных знаков
-[ ] Interview scripts, survey guides и question banks в onboarding/hardening оформлены как prompts / labels без `?`
-[ ] Hardening queue items оформлены как noun phrases / decision areas без `?`
+[ ] Interview scripts, survey guides и question banks в onboarding и уточнении паспорта оформлены как prompts / labels без `?`
+[ ] Список уточнений оформлен как noun phrases / decision areas без `?`
 
 ## 5A. Если выбран product mode
 [ ] Заполнено название проекта
@@ -197,11 +197,11 @@
 [ ] Passport Challenge Review включает Evidence, PAF Consistency, цепочку ценности клиента, SMART, Metrics, Human Checkpoints и Source Hygiene
 [ ] Проверка цепочки ценности клиента идёт до SMART Review и Metrics Review
 [ ] Review различает passport weak point, onboarding gap, missing project evidence, PAF consistency issue, customer value chain gap, SMART issue, metrics issue, human checkpoint issue, source hygiene issue, forbidden claim, publish blocker и wording issue
-[ ] Hardening-вопросы предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C
-[ ] Hardening-вопросы рекомендуют один вариант, если контекста достаточно
-[ ] Hardening-вопросы по missing inputs оформлены как `[PASSPORT HARDENING INTERVIEW]`, а не как обычный intake-вопрос
-[ ] Варианты A/B/C, hardening queue, шаблоны, checklist и формы внутри assistant-turn не добавляют дополнительные вопросительные знаки
-[ ] Copilot не выбирает hardening decisions за пользователя
+[ ] Вопросы по уточнению паспорта предлагают 2-3 варианта улучшения слабых формулировок в формате A/B/C
+[ ] Вопросы по уточнению паспорта рекомендуют один вариант, если контекста достаточно
+[ ] Вопросы по missing inputs оформлены как `[PASSPORT HARDENING INTERVIEW]`, а не как обычный intake-вопрос
+[ ] Варианты A/B/C, список уточнений, шаблоны, checklist и формы внутри assistant-turn не добавляют дополнительные вопросительные знаки
+[ ] Copilot не выбирает решения по уточнению паспорта за пользователя
 [ ] Final Passport Snapshot не появляется в первом post-draft ответе до ответов пользователя
 [ ] Review маркирует факты, выводы, допущения, неопределённости и forbidden claims
 [ ] Review не представляет локальные адаптации как канон PAF
@@ -330,15 +330,15 @@
 [ ] После согласия пользователя запускает Passport Challenge Review отдельным assistant-turn
 [ ] В review-turn находит critical и major weak points
 [ ] В review-turn не выгружает полный review-report по умолчанию
-[ ] В review-turn спрашивает готовность перейти к первому hardening-вопросу
+[ ] В review-turn спрашивает готовность перейти к первому вопросу по уточнению паспорта
 [ ] После согласия пользователя переходит к Passport Hardening Interview отдельным assistant-turn
-[ ] В hardening-turn задаёт первый hardening-вопрос
-[ ] Hardening-вопрос содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант
-[ ] Hardening-вопрос объясняет, какое поле паспорта изменится
-[ ] Останавливается на первом hardening-вопросе и не выдаёт Final Passport Snapshot в том же ответе
-[ ] Не выбирает hardening decisions за пользователя
+[ ] В turn уточнения паспорта задаёт первый вопрос по уточнению паспорта
+[ ] Вопрос по уточнению паспорта содержит 2-3 варианта ответа в формате A/B/C и один рекомендованный вариант
+[ ] Вопрос по уточнению паспорта объясняет, какое поле паспорта изменится
+[ ] Останавливается на первом вопросе по уточнению паспорта и не выдаёт Final Passport Snapshot в том же ответе
+[ ] Не выбирает решения по уточнению паспорта за пользователя
 [ ] Если пользователь уже добавил draft в Sources, первый вопрос касается удаления draft из Sources или замены его финальным паспортом после уточнений
-[ ] Готовит Final Passport Snapshot только после ответов пользователя на hardening-вопросы
+[ ] Готовит Final Passport Snapshot только после ответов пользователя на вопросы по уточнению паспорта
 [ ] Объясняет, что финальный [PROJECT PASSPORT] пользователь сохраняет и добавляет в Sources вручную
 
 ### Тест 11 — старый паспорт без цепочки ценности клиента
